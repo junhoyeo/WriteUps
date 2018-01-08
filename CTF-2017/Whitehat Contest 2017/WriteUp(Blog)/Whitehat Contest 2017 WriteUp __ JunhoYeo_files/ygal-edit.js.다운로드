@@ -18,6 +18,8 @@ $(document).ready(function() {
 					a = a.substring(35,a.length-1);
 					a = a.replace("image",j);
 					d.attr("src",a.replace('original',j));
+				} else if(b.match(x+"(.*?)"+g)!=null) {
+					a = b.match(x+"(.*?)"+g)[0];
 					a = a.substring(35,a.length-1);
 					a = a.replace("image",z);
 					d.attr("src",a.replace('original',z));
