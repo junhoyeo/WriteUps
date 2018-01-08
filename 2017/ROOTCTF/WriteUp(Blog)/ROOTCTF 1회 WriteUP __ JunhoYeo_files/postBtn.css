@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+.no_scroll,
+.no_scroll body{height:100%;overflow:hidden;}
+.screen_out{overflow:hidden;position:absolute;width:0;height:0;line-height:0;text-indent:-9999px}
+.container_postbtn{padding:35px 0;position:relative;overflow:hidden}
+.container_postbtn:after{content:'';display:block;clear:both}
+.container_postbtn .ico_postbtn,
+.bundle_ccl .ico_postbtn{display:inline-block;overflow:hidden;background:url(//t1.daumcdn.net/tistory_admin/static/admin/editor/ico_postbtn.png) no-repeat;vertical-align:top;text-indent:-9999px}
+
+/* 좌측 공감,sns,신고 버튼 */
+.container_postbtn .postbtn_like{float:left;border-radius:1px;border:1px solid #959595;border-color:rgba(149,149,149,0.25)}
+.container_postbtn .postbtn_like .like_btn{float:left}
+.container_postbtn .postbtn_like label{float:left;overflow:hidden;height:30px;padding:0 13px;line-height:28px;cursor:pointer}
+.container_postbtn .postbtn_like .ico_bar{float:left;overflow:hidden;width:1px;height:14px;margin:8px 0 0;font-family:AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;font-size:1px;background:#959595;background:rgba(149,149,149,0.25)}
+.container_postbtn .postbtn_like .inp_btn{position:absolute;top:-20px;left:-20px;width:1px;height:1px}
+.container_postbtn .postbtn_like .ico_postbtn{width:14px;height:14px;margin-top:8px}
+.container_postbtn .postbtn_like .ico_like{margin-right:1px;background-position:0 0}
+.container_postbtn .postbtn_like .empathy_up .ico_like{background-position:-20px 0}
+.container_postbtn .postbtn_like .empathy_up_without_ani .ico_like{background-position:-20px 0}
+.container_postbtn .postbtn_like .ico_sns{background-position:-40px 0}
+.container_postbtn .postbtn_like .ico_report{background-position:-60px 0;line-height:30px}
+.container_postbtn .postbtn_like .txt_like{font-family:AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;font-size:12px;line-height:30px}
+
+/* 우측 ccl */
+.container_postbtn .postbtn_ccl{float:right;position:relative;padding-top:8px}
+.container_postbtn .link_ccl{display:block;height:16px;font-size:0}
+.container_postbtn .bundle_ccl{display:block}
+.bundle_ccl .ico_postbtn{width:16px;height:16px;margin-left:2px}
+.bundle_ccl .ico_ccl1{background-position:0 -20px}
+.bundle_ccl .ico_ccl2{background-position:-20px -20px}
+.bundle_ccl .ico_ccl3{background-position:-40px -20px}
+.bundle_ccl .ico_ccl4{background-position:-60px -20px}
+.layer_ccl{display:none;position:absolute;padding:8px 17px 16px 16px;border-radius:1px;border:1px solid #C5CDD7;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,0.12);white-space:nowrap}
+.layer_ccl .txt_mark{display:block;padding-top:8px;font-family:AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;font-size:12px;line-height:16px;color:#333}
+.layer_ccl .ico_postbtn{margin:0 5px 0 0}
+.layer_ccl .ico_arrbt{position:absolute;right:0;bottom:-10px;width:20px;height:10px;background-position:-80px 0}/* 2017-12-13 수정 */
+
+/* 공유하기 레이어 */
+.layer_sns{display:none;position:absolute;top:0;left:0;right:0;bottom:0;z-index:9999}
+.layer_sns .bg_layer{position:absolute;top:0;left:0;right:0;bottom:0;background:url(//t1.daumcdn.net/tistory_admin/static/admin/editor/bg_layer.png) repeat 0 0}
+.layer_sns .ico_sns{display:block;overflow:hidden;width:48px;height:48px;background:url(//t1.daumcdn.net/tistory_admin/static/admin/editor/ico_sns.png) no-repeat;vertical-align:top;text-indent:-9999px;cursor:pointer}
+.layer_sns .btn_close{position:absolute;top:50%;left:50%;padding:10px;margin:-61px 0 0 102px;border:0 none;background:transparent;cursor:pointer;display:block}
+.layer_sns .ico_close{width:12px;height:12px;background-position:-150px 0}
+.layer_sns .list_sns{position:absolute;top:50%;left:50%;width:205px;height:116px;margin:-61px 0 0 -102px;padding:1px 0 0 29px;border-radius:1px;border:1px solid #465468;background:#fff;list-style:none;box-sizing:content-box}/* 2017-12-13 수정 */
+.layer_sns .list_sns li{float:left;margin:32px 16px 0 0;list-style:none}/* 2017-12-13 수정 */
+.layer_sns .ico_fb{background-position:0 0}
+.layer_sns .ico_kt{background-position:-50px 0}
+.layer_sns .ico_ks{background-position:-100px 0}
+.layer_sns .ico_tw{background-position:0 -50px}
+.layer_sns .ico_cafe{background-position:-50px -50px}
+.layer_sns .ico_url{width:50px;height:50px;margin:-1px;background-position:-99px -49px}
+
+/* 레티나 이미지 */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+not all, only screen and (min-resolution: 144dpi),
+only screen and (min-resolution: 1.5dppx){
+    .container_postbtn .ico_postbtn,
+    .bundle_ccl .ico_postbtn{background-image:url(//t1.daumcdn.net/tistory_admin/static/admin/editor/r2/ico_postbtn.png);background-size:102px 40px}
+    .layer_sns .ico_sns{background-image:url(//t1.daumcdn.net/tistory_admin/static/admin/editor/r2/ico_sns.png);background-size:170px 100px}
+}

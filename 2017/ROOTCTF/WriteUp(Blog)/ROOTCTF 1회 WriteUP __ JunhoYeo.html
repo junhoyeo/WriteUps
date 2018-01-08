@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://nogadaworks.tistory.com/50?category=798334 -->
+<html lang="ko" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/menubar.css"><!--[if lt IE 9]><script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script><![endif]--><!--[if gte IE 9]>
+<!--><script src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/jquery-3.2.1.min.js.다운로드"></script><!--<![endif]-->
+<script>var tjQuery = jQuery.noConflict(true);</script><style type="text/css">.tt_article_useless_p_margin p {padding-top:0 !important;padding-bottom:0 !important;margin-top:0 !important;margin-bottom:0 !important;}</style><meta name="referrer" content="always"><link rel="shortcut icon" href="http://t1.daumcdn.net/tistory_admin/static/top/favicon_0630.ico"><meta name="description" content="2017.12.22~2017.12.23 이틀동안 진행했던 제 1회 서울디지텍고등학교 청소년 해킹방어대회가 끝났다.   아무래도 리버싱이랑 포너블 쪽은... 항상 느끼는 것이지만 더 열심히 해봐야 할 것 같다(껄껄) 롸이트업을..">
+
+<!-- BEGIN OPENGRAPH -->
+<link rel="canonical" href="http://nogadaworks.tistory.com/50"><meta property="og:type" content="article"><meta property="og:url" content="http://nogadaworks.tistory.com/50"><meta property="og:site_name" content="JunhoYeo"><meta property="og:title" content="ROOTCTF 1회 WriteUP"><meta name="by" content="@JunhoYeo"><meta property="og:description" content="2017.12.22~2017.12.23 이틀동안 진행했던 제 1회 서울디지텍고등학교 청소년 해킹방어대회가 끝났다.   아무래도 리버싱이랑 포너블 쪽은... 항상 느끼는 것이지만 더 열심히 해봐야 할 것 같다(껄껄) 롸이트업을.."><meta property="og:image" content="http://cfile26.uf.tistory.com/image/99300A465A4047AA08D7CE">
+<!-- END OPENGRAPH -->
+
+
+
+<!-- BEGIN TWITTERCARD -->
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@TISTORY"><meta name="twitter:title" content="ROOTCTF 1회 WriteUP"><meta name="twitter:description" content="2017.12.22~2017.12.23 이틀동안 진행했던 제 1회 서울디지텍고등학교 청소년 해킹방어대회가 끝났다.   아무래도 리버싱이랑 포너블 쪽은... 항상 느끼는 것이지만 더 열심히 해봐야 할 것 같다(껄껄) 롸이트업을.."><meta property="twitter:image" content="http://cfile26.uf.tistory.com/image/99300A465A4047AA08D7CE">
+<!-- END TWITTERCARD -->
+
+
+
+<!-- BEGIN DAUMAPP -->
+<meta property="dg:plink" content="http://nogadaworks.tistory.com/50"><meta name="plink" content="http://nogadaworks.tistory.com/50"><meta name="title" content="ROOTCTF 1회 WriteUP"><meta name="article:media_name" content="JunhoYeo"><meta property="article:mobile_url" content="http://nogadaworks.tistory.com/m/50"><meta property="article:pc_url" content="http://nogadaworks.tistory.com/50"><meta property="article:mobile_view_url" content="http://nogadaworks.tistory.com/m/50"><meta property="article:pc_view_url" content="http://nogadaworks.tistory.com/50"><meta property="article:talk_channel_view_url" content="http://nogadaworks.tistory.com/m/50"><meta property="article:pc_service_home" content="http://www.tistory.com"><meta property="article:mobile_service_home" content="http://www.tistory.com/m"><meta property="article:txid" content="2816583_50"><meta property="article:published_time" content="2017-12-25T00:43:27+09:00"><meta property="og:regDate" content="20171225004327"><meta property="article:modified_time" content="2017-12-25T09:44:15+09:00">
+<!-- END DAUMAPP -->
+
+
+
+<!-- BEGIN STRUCTURED_DATA -->
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BlogPosting","mainEntityOfPage":{"@id":"http:\/\/nogadaworks.tistory.com\/50"},"url":"http:\/\/nogadaworks.tistory.com\/50","headline":"ROOTCTF 1\ud68c WriteUP","description":"2017.12.22~2017.12.23 \uc774\ud2c0\ub3d9\uc548 \uc9c4\ud589\ud588\ub358 \uc81c 1\ud68c \uc11c\uc6b8\ub514\uc9c0\ud14d\uace0\ub4f1\ud559\uad50 \uccad\uc18c\ub144 \ud574\ud0b9\ubc29\uc5b4\ub300\ud68c\uac00 \ub05d\ub0ac\ub2e4.   \uc544\ubb34\ub798\ub3c4 \ub9ac\ubc84\uc2f1\uc774\ub791 \ud3ec\ub108\ube14 \ucabd\uc740... \ud56d\uc0c1 \ub290\ub07c\ub294 \uac83\uc774\uc9c0\ub9cc \ub354 \uc5f4\uc2ec\ud788 \ud574\ubd10\uc57c \ud560 \uac83 \uac19\ub2e4(\uaec4\uaec4) \ub878\uc774\ud2b8\uc5c5\uc744..","author":{"@type":"Person","name":"@JunhoYeo"},"image":{"@type":"ImageObject","url":"http:\/\/cfile26.uf.tistory.com\/image\/99300A465A4047AA08D7CE","width":"800px","height":"800px"},"datePublished":"20171225T00:43:27+09:00","dateModified":"20171225T09:44:15+09:00","publisher":{"@type":"Organization","name":"TISTORY","logo":{"@type":"ImageObject","url":"https:\/\/t1.daumcdn.net\/cssjs\/icon\/557567EA016E200001","width":"800px","height":"800px"}}}</script>
+<!-- END STRUCTURED_DATA -->
+
+<link rel="apple-touch-icon" href="http://i1.daumcdn.net/thumb/C180x180/?fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F2816583%2Fattach%2F37d65526312743ecb3d9ae10453d4bf3">
+<link rel="apple-touch-icon" sizes="76x76" href="http://i1.daumcdn.net/thumb/C76x76/?fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F2816583%2Fattach%2F37d65526312743ecb3d9ae10453d4bf3">
+<link rel="apple-touch-icon" sizes="120x120" href="http://i1.daumcdn.net/thumb/C120x120/?fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F2816583%2Fattach%2F37d65526312743ecb3d9ae10453d4bf3">
+<link rel="apple-touch-icon" sizes="152x152" href="http://i1.daumcdn.net/thumb/C152x152/?fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F2816583%2Fattach%2F37d65526312743ecb3d9ae10453d4bf3">
+
+	<title>ROOTCTF 1회 WriteUP :: JunhoYeo</title>
+<meta name="title" content="ROOTCTF 1회 WriteUP :: JunhoYeo">
+<meta name="description" content="">
+
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+<link rel="alternate" type="application/rss+xml" title="JunhoYeo" href="http://nogadaworks.tistory.com/rss">
+<link rel="shortcut icon" href="http://nogadaworks.tistory.com/favicon.ico">
+
+<link rel="stylesheet" href="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/style.css">
+<link rel="stylesheet" href="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css">
+<![endif]-->
+<link href="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+
+<script>
+//추가 단축키
+var key = new Array();
+key['w'] = "/admin/entry/post/";
+key['e'] = "/admin/skin/edit/";
+key['r'] = "/admin/plugin/refererUrlLog/";
+key['h'] = "/";
+
+function getKey(keyStroke) {
+	if ((event.srcElement.tagName != 'INPUT') && (event.srcElement.tagName != 'TEXTAREA')){
+		isNetscape=(document.layers);
+		eventChooser = (isNetscape) ? keyStroke.which : event.keyCode;
+		which = String.fromCharCode(eventChooser).toLowerCase();
+		for (var i in key)
+			if (which == i) window.location = key[i];
+	}
+}
+document.onkeypress = getKey;
+</script>
+
+<style type="text/css">
+		#daumSearchBox {
+			height: 21px;
+			background-image : url(//i1.daumcdn.net/imgsrc.search/search_all/show/tistory/plugin/bg_search2_2.gif);
+			margin: 5px auto ;
+			padding: 0;
+		}
+		#daumSearchBox input {
+			background: none;
+			margin : 0;
+			padding : 0;
+			border : 0;
+		}
+		#daumSearchBox #daumLogo {
+			width: 34px;
+			height: 21px;
+			float: left;
+			margin-right: 5px;
+			background-image : url(//i1.daumcdn.net/img-media/tistory/img/bg_search1_2_2010ci.gif);
+		}
+		#daumSearchBox #show_q {
+			background-color: transparent;
+			border: none;
+			font: 12px Gulim, Sans-serif;
+			color: #555;
+			margin-top: 4px;
+			margin-right: 15px;
+			float: left;
+		}
+
+		#daumSearchBox #show_btn {
+			background-image : url(//i1.daumcdn.net/imgsrc.search/search_all/show/tistory/plugin/bt_search_2.gif);
+			width: 37px;
+			height: 21px;
+			float: left;
+			margin:0;
+			cursor:pointer;
+			text-indent:-1000em;
+		}
+	</style><link rel="stylesheet" href="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/lightbox.min.css">
+<link rel="stylesheet" type="text/css" href="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/style(1).css">
+<script type="text/javascript" src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/profile.js.다운로드"></script>
+	<style type="text/css">
+		.another_category { border: 1px solid #E5E5E5; padding: 10px 10px 5px; margin:10px 0; clear: both; }
+		.another_category h4 { font-size: 12px !important; margin: 0 !important; border-bottom: 1px solid #E5E5E5 !important; padding: 2px 0 6px !important; }
+		.another_category h4 a { font-weight: bold !important; }
+		.another_category table { table-layout: fixed; border-collapse: collapse; width: 100% !important; margin-top: 10px !important; }
+		* html .another_category table { width: auto !important; }
+		*:first-child+html .another_category table { width: auto !important; }
+		.another_category th, .another_category td { padding: 0 0 4px !important; }
+		.another_category th { text-align: left; font-size: 12px !important; font-weight: normal;  word-break: break-all; overflow: hidden; line-height: 1.5; }
+		.another_category td { text-align: right; width: 80px; font-size: 11px; }
+		.another_category th a { font-weight: normal; text-decoration: none; border: none !important; }
+		.another_category th a.current{ font-weight: bold; text-decoration: none !important; border-bottom: 1px solid !important; }
+		.another_category th span { font-weight: normal; text-decoration: none; font: 10px Tahoma, Sans-serif; border: none !important; }
+
+		.another_category_color_gray, .another_category_color_gray h4 { border-color: #E5E5E5 !important; }
+		.another_category_color_gray * { color: #909090 !important; }
+		.another_category_color_gray th a.current{border-color:#909090 !important;}
+		.another_category_color_gray h4, .another_category_color_gray h4 a { color: #737373 !important; }
+
+
+		.another_category_color_red, .another_category_color_red h4 { border-color: #F6D4D3 !important;  }
+		.another_category_color_red * { color: #E86869 !important; }
+		.another_category_color_red th a.current{border-color:#E86869 !important;}
+		.another_category_color_red h4, .another_category_color_red h4 a { color: #ED0908 !important; }
+
+
+		.another_category_color_green, .another_category_color_green h4 { border-color: #CCE7C8 !important; }
+		.another_category_color_green * { color: #64C05B !important; }
+		.another_category_color_green th a.current{border-color:#64C05B !important;}
+		.another_category_color_green h4, .another_category_color_green h4 a { color: #3EA731 !important; }
+
+
+		.another_category_color_blue, .another_category_color_blue h4 { border-color: #C8DAF2 !important; }
+		.another_category_color_blue * { color: #477FD6 !important; }
+		.another_category_color_blue th a.current{border-color:#477FD6 !important;}
+		.another_category_color_blue h4, .another_category_color_blue h4 a { color: #1960CA !important; }
+
+
+		.another_category_color_violet, .another_category_color_violet h4 { border-color: #E1CEEC !important;  }
+		.another_category_color_violet * { color:#9D64C5 !important; }
+		.another_category_color_violet th a.current{border-color:#9D64C5 !important;}
+		.another_category_color_violet h4, .another_category_color_violet h4 a { color: #7E2CB5 !important; }
+	</style>
+<script type="text/javascript">
+        window.TistoryBlog = {
+            url: "http://nogadaworks.tistory.com",
+            tistoryUrl: "http://nogadaworks.tistory.com"
+        };
+        var servicePath = "";
+        var blogURL = "";
+    </script>
+
+	<script> (function() { window.orgjQuery = window.jQuery; window.jQuery = tjQuery })()</script>
+    <script src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/uoclike.min.js.다운로드"></script>
+	<script> (function() { window.jQuery = window.orgjQuery; delete window.orgjQuery })()</script>
+    <script>
+		(function($) {
+			$.fn.extend({
+				size: function () {
+					return this.length
+				}
+			});
+			$.fn.UOCLike.defaults.updateServiceCategory = true;
+					})(tjQuery)
+    </script>
+        <script type="text/javascript" src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/base.js.다운로드"></script>
+        <link rel="stylesheet" type="text/css" href="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/dialog.css">
+            <link rel="stylesheet" type="text/css" href="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/postBtn.css">
+    <script src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/kakao.min.js.다운로드"></script><style type="text/css">#DragSchLayer{display:block;position:absolute;z-index:1000;width:61px;height:31px;margin:-30px 0px 0px -5px;background:url(http://search1.daumcdn.net/search/statics/common/pi/btn_drag_rect.png);cursor:pointer}             @media             only screen and (-webkit-min-device-pixel-ratio: 1.5),             only screen and (min-device-pixel-ratio: 1.5),             only screen and (min-resolution: 1.5dppx) {             #DragSchLayer{background-image:url(http://search1.daumcdn.net/search/statics/common/pi/r2/btn_drag_rect.png);background-size:61px 31px}}            </style><script type="text/javascript" async="" src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/td.min.js.다운로드"></script></head>
+
+<body id="tt-body-page">
+
+<script type="text/javascript">
+	(function() {
+		if (!window.T) {
+			window.T = {}
+		}
+		window.T.config = {"TOP_SSL_URL":"https:\/\/www.tistory.com","PREVIEW":false,"ROLE":"owner","PREV_PAGE":"","NEXT_PAGE":"\/42?category=798334","BLOG":{"isDormancy":false,"title":"JunhoYeo"},"NEED_COMMENT_LOGIN":false,"COMMENT_LOGIN_CONFIRM_MESSAGE":"","LOGIN_URL":"https:\/\/www.tistory.com\/auth\/login\/?redirectUrl=http%3A%2F%2Fnogadaworks.tistory.com%2F50%3Fcategory%3D798334","DEFAULT_URL":"http:\/\/nogadaworks.tistory.com","USER":{"name":"@JunhoYeo","homepage":"http:\/\/nogadaworks.tistory.com"}};
+	})();
+</script>
+
+	<script type="text/javascript" src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/owner.js.다운로드"></script>
+<script type="text/javascript" src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/common.js.다운로드"></script>
+<div style="margin:0; padding:0; border:none; background:none; float:none; clear:none; z-index:0"></div>
+<div id="wrap">
+	<div id="sidebar" class="mCustomScrollbar _mCS_1 mCS-autoHide"><div id="mCSB_1" class="mCustomScrollBox mCS-dark-thin mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+		<div class="blank"></div>
+		<h1><a href="http://nogadaworks.tistory.com/">JunhoYeo</a></h1>
+		
+			<div class="widget category"> <!-- Category -->
+				<ul class="tt_category">
+	<li class="">
+		<a class="link_tit" href="http://nogadaworks.tistory.com/category">
+			분류 전체보기							<span class="c_cnt">(65)</span>
+			
+							<img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/new_ico_5.gif" alt="N" style="vertical-align:middle;padding-left:2px;" class="mCS_img_loaded">
+					</a>
+
+				<ul class="category_list">
+							<li class="">
+					<a class="link_item" href="http://nogadaworks.tistory.com/category/Hacking">
+						Hacking													<span class="c_cnt">(15)</span>
+						
+													<img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/new_ico_5.gif" alt="N" style="vertical-align:middle;padding-left:2px;" class="mCS_img_loaded">
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="http://nogadaworks.tistory.com/category/Hacking/Pwnable">
+									Pwnable
+																			<span class="c_cnt">(10)</span>
+									
+																			<img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/new_ico_5.gif" alt="N" style="vertical-align:middle;padding-left:2px;" class="mCS_img_loaded">
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="http://nogadaworks.tistory.com/category/Hacking/Reversing">
+									Reversing
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="http://nogadaworks.tistory.com/category/Hacking/Web">
+									Web
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="http://nogadaworks.tistory.com/category/Hacking/Network">
+									Network
+																			<span class="c_cnt">(1)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="http://nogadaworks.tistory.com/category/Hacking/MISC">
+									MISC
+																			<span class="c_cnt">(4)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="http://nogadaworks.tistory.com/category/Programming">
+						Programming													<span class="c_cnt">(39)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="http://nogadaworks.tistory.com/category/Programming/Develop">
+									Develop
+																			<span class="c_cnt">(3)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="http://nogadaworks.tistory.com/category/Programming/codeup.kr">
+									codeup.kr
+																			<span class="c_cnt">(13)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="http://nogadaworks.tistory.com/category/Programming/acmicpc.net">
+									acmicpc.net
+																			<span class="c_cnt">(18)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="http://nogadaworks.tistory.com/category/Programming/NYPC">
+									NYPC
+																			<span class="c_cnt">(4)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="http://nogadaworks.tistory.com/category/Programming/Other">
+									Other
+																			<span class="c_cnt">(1)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="http://nogadaworks.tistory.com/category/Linux">
+						Linux													<span class="c_cnt">(2)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="http://nogadaworks.tistory.com/category/CTF%20Write-Up">
+						CTF Write-Up													<span class="c_cnt">(3)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="http://nogadaworks.tistory.com/category/Design">
+						Design													<span class="c_cnt">(5)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="http://nogadaworks.tistory.com/category/Design/Drawings">
+									Drawings
+																			<span class="c_cnt">(2)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="http://nogadaworks.tistory.com/category/Design/PowerPoint">
+									PowerPoint
+																			<span class="c_cnt">(3)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="http://nogadaworks.tistory.com/category/Blog">
+						Blog													<span class="c_cnt">(1)</span>
+						
+											</a>
+
+					
+				</li>
+					</ul>
+			</li>
+</ul>
+			</div>
+			
+			<div class="widget"> <!-- Blog Menu -->
+				<ul>		<li class="t_menu_home first">
+			<a href="http://nogadaworks.tistory.com/">홈</a>
+		</li>
+				<li class="t_menu_tag">
+			<a href="http://nogadaworks.tistory.com/tag">태그</a>
+		</li>
+				<li class="t_menu_medialog">
+			<a href="http://nogadaworks.tistory.com/media">미디어로그</a>
+		</li>
+				<li class="t_menu_location">
+			<a href="http://nogadaworks.tistory.com/location">위치로그</a>
+		</li>
+				<li class="t_menu_guestbook last">
+			<a href="http://nogadaworks.tistory.com/guestbook">방명록</a>
+		</li>
+		</ul>
+			</div>
+			 <!-- Notice -->
+			
+			<div class="widget">
+				<ul>
+					
+				</ul>
+			</div>
+			
+			
+			<div class="widget"> <!-- Recent Comments -->
+				<ul id="recentComments">
+					
+				</ul>
+			</div>
+			 <!-- Links -->
+			<div class="widget">
+				<ul>
+					
+				</ul>
+			</div>
+			 <!-- Counter -->
+			<div class="widget counter text-center">
+				<span class="yesterday">7</span> /
+				<span class="today">3</span> /
+				<span class="total">2,216</span>
+			</div>
+			 <!-- Search -->
+			<div class="widget search text-center">
+				
+				<input class="search" placeholder="press enter to search…" type="text" name="search" value="" onkeypress="if (event.keyCode == 13) { try{window.location.href=&#39;/search/&#39;+looseURIEncode(document.getElementsByName(&#39;search&#39;)[0].value);document.getElementsByName(&#39;search&#39;)[0].value=&#39;&#39;;return false;}catch(e){} }">
+				
+			</div>
+			
+		<div class="blank"></div>
+	</div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-thin mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 317px; max-height: 578px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+
+	<div id="content">
+		<div id="content-inner">
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div id="head">
+				<h2><a href="http://nogadaworks.tistory.com/50">ROOTCTF 1회 WriteUP</a></h2>
+				<div class="date">2017.12.25 00:43</div>
+			</div>
+
+			<div id="body" class="entry">
+				<div class="tag_label">
+				
+				</div>
+
+				<div class="article">
+				<div class="tt_article_useless_p_margin"><p style="text-align: center; clear: none; float: none;"><b>2017.12.22~2017.12.23</b> 이틀동안 진행했던 제 1회 서울디지텍고등학교 청소년 해킹방어대회가 끝났다.</p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile29.uf.tistory.com/attach/994D9A405A40496D1B550B" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/994D9A405A40496D1B550B" style="cursor: pointer;max-width:100%;height:auto" width="900" height="708" filename="25659610_345113319286797_718755595318308720_n.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile2.uf.tistory.com/attach/999B9D405A40496D0E95A5" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/999B9D405A40496D0E95A5" style="cursor: pointer;max-width:100%;height:auto" width="900" height="695" filename="25994750_345113322620130_7217832820128080012_n.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;">아무래도 리버싱이랑 포너블 쪽은... 항상 느끼는 것이지만 더 열심히 해봐야 할 것 같다(껄껄)</p><p style="text-align: center; clear: none; float: none;">롸이트업을 원래 파일로 올렸는데 나같은 늅늅의 것이라 그런지 아무도 안 다운받는 것 같아서 그냥 사진으로도 올려요ㅋㅋㅋㅋ</p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile26.uf.tistory.com/attach/99300A465A4047AA08D7CE" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/99300A465A4047AA08D7CE" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-01.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile24.uf.tistory.com/attach/99A498465A4047AB1D14B0" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/99A498465A4047AB1D14B0" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-02.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile22.uf.tistory.com/attach/99F3B2465A4047AC11A9C9" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/99F3B2465A4047AC11A9C9" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-03.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile23.uf.tistory.com/attach/99ABDE465A4047AC1CEB37" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/99ABDE465A4047AC1CEB37" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-04.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile27.uf.tistory.com/attach/99CE7C465A4047AD16AB5B" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/99CE7C465A4047AD16AB5B" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-05.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile30.uf.tistory.com/attach/9901B7465A4047AD0F8EA6" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/9901B7465A4047AD0F8EA6" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-06.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile7.uf.tistory.com/attach/9906D8465A4047AE0E99FF" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/9906D8465A4047AE0E99FF" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-07.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile28.uf.tistory.com/attach/999736465A4047AF1FA177" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/999736465A4047AF1FA177" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-08.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile27.uf.tistory.com/attach/99F7DB475A4047AF1B7E2D" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/99F7DB475A4047AF1B7E2D" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-09.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile23.uf.tistory.com/attach/99E98F475A4047B01DE13C" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/99E98F475A4047B01DE13C" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-10.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile26.uf.tistory.com/attach/99FA70475A4047B01B8B00" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/99FA70475A4047B01B8B00" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-11.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile26.uf.tistory.com/attach/99FB4C475A4047B11B2290" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/99FB4C475A4047B11B2290" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-12.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile22.uf.tistory.com/attach/9920CB475A4047B216809B" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/9920CB475A4047B216809B" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-13.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile8.uf.tistory.com/attach/992A99475A4047B215383C" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/992A99475A4047B215383C" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-14.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile8.uf.tistory.com/attach/9920D4435A4047B31A10E7" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/9920D4435A4047B31A10E7" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-15.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile10.uf.tistory.com/attach/9966DC435A4047B40F9ABB" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/9966DC435A4047B40F9ABB" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-16.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile8.uf.tistory.com/attach/994B19435A4047B414C0B7" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/994B19435A4047B414C0B7" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-17.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile3.uf.tistory.com/attach/992F93435A4047B51832F0" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/992F93435A4047B51832F0" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-18.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile22.uf.tistory.com/attach/995E50435A4047B511BCB3" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/995E50435A4047B511BCB3" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-19.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile21.uf.tistory.com/attach/994260435A4047B6150883" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/994260435A4047B6150883" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-20.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile24.uf.tistory.com/attach/993A10435A4047B7166FFD" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/993A10435A4047B7166FFD" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-21.jpg" filemime="image/jpeg" ""=""></span></span></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:900px;;height:auto;max-width:100%"><span data-url="http://cfile30.uf.tistory.com/attach/997AF4435A4047B70DA447" data-lightbox="lightbox"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/997AF4435A4047B70DA447" style="cursor: pointer;max-width:100%;height:auto" width="900" height="1274" filename="ROOTCTF_1_WriteUP_JunhoYeo-22.jpg" filemime="image/jpeg" ""=""></span></span></p><p><br></p><p><span class="imageblock" style="display:inline-block;;height:auto;max-width:100%"><a href="http://nogadaworks.tistory.com/attachment/cfile25.uf@99AA84385A3FCB1C21476C.pdf"><img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/pdf.gif" alt="" style="vertical-align: middle;"> ROOTCTF_1_WriteUP_JunhoYeo.pdf</a></span></p><p><br></p><div class="container_postbtn"><div class="postbtn_like"><label><span class="ico_postbtn ico_sns">sns</span><input type="button" class="inp_btn"></label><span class="ico_bar"></span><label data-entry-id="50"><span class="ico_postbtn ico_report">신고</span><input type="button" class="inp_btn"></label></div><div class="postbtn_ccl" data-ccl-type="5"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko" target="_blank" class="link_ccl"><span class="bundle_ccl"><span class="ico_postbtn ico_ccl1">저작자표시</span><span class="ico_postbtn ico_ccl2">비영리</span><span class="ico_postbtn ico_ccl4">동일조건</span></span></a></div></div>    <!--
+	<rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+		<Work rdf:about="">
+			<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/kr/" />
+		</Work>
+		<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/">
+			<permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+			<permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+			<requires rdf:resource="http://web.resource.org/cc/Notice"/>
+			<requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+			<prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/>
+		</License>
+	</rdf:RDF>
+	--><div class="another_category another_category_color_gray">
+<h4>'<a href="http://nogadaworks.tistory.com/category/CTF%20Write-Up">CTF Write-Up</a>' 카테고리의 다른 글</h4>
+<table>
+<tbody><tr>
+<th>
+<a href="http://nogadaworks.tistory.com/50?category=798334" class="current">ROOTCTF 1회 WriteUP</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2017.12.25</td>
+</tr>
+<tr>
+<th>
+<a href="http://nogadaworks.tistory.com/42?category=798334">2nd 국민대X우분투 청소년 CTF WriteUp</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2017.12.10</td>
+</tr>
+<tr>
+<th>
+<a href="http://nogadaworks.tistory.com/38?category=798334">Whitehat Contest 2017 WriteUp</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2017.12.04</td>
+</tr>
+</tbody></table></div></div>
+				</div>
+
+				
+				<div class="admin">
+					<a href="http://nogadaworks.tistory.com/admin/entry/edit/50?returnURL=http%3A%2F%2Fnogadaworks.tistory.com%2F50">Modify</a>
+					<span class="line">|</span>
+					<a href="http://nogadaworks.tistory.com/50?category=798334#" onclick="deleteEntry(50); return false;">Delete</a>
+				</div>
+				
+
+				<div id="entry50Comment" style="display:block">
+				<div id="communicate">
+				<form method="post" action="http://nogadaworks.tistory.com/comment/add/50" onsubmit="return false" style="margin: 0">
+					<div class="communicateWrite">
+					
+						<div class="textarea"><textarea name="comment" rows="10" cols="50"></textarea></div>
+						<div class="submit"><input type="submit" value="WRITE" onclick="addComment(this, 50); return false;"></div>
+						<div class="secret">
+							<label for="secret">SECRET</label>
+							<input id="secret" type="checkbox" name="">
+						</div>
+						<div class="clear"></div>
+					</div>
+				</form>
+
+				
+				</div>
+				</div><script type="text/javascript">loadedComments[50]=true;findFragmentAndHighlight(50)</script>
+			</div>
+			
+
+			
+
+			<div id="paging">
+			
+				<a class="prev no-more-prev">PREV</a>
+				<a class="numbox"><span class="selected">1</span></a><a class="numbox" href="http://nogadaworks.tistory.com/42?category=798334"><span>2</span></a><a class="numbox" href="http://nogadaworks.tistory.com/38?category=798334"><span>3</span></a>
+				<a href="http://nogadaworks.tistory.com/42?category=798334" class="next ">NEXT</a>
+			
+			</div>
+
+			<s_sidebar_element>
+			<div id="recent-post">
+				<h4><a href="http://nogadaworks.tistory.com/category">+ Recent posts</a></h4>
+				<ul>
+					
+					<li class="box">
+						<a href="http://nogadaworks.tistory.com/65" class="thumb">
+						
+						<span class="title">해커스쿨 FTZ level6~9</span>
+						</a>
+					</li>
+					
+
+					<li class="box">
+						<a href="http://nogadaworks.tistory.com/64" class="thumb">
+						
+						<span class="title">Christmas CTF 2017 [MISC] SO..</span>
+						</a>
+					</li>
+					
+
+					<li class="box">
+						<a href="http://nogadaworks.tistory.com/63" class="thumb">
+						
+						<span class="title">Christmas CTF 2017 [MISC] ET..</span>
+						</a>
+					</li>
+					
+
+					<li class="box">
+						<a href="http://nogadaworks.tistory.com/62" class="thumb">
+						
+						<span class="title">System32 MISC - What is..?</span>
+						</a>
+					</li>
+					
+					<div class="clear"></div>
+				</ul>
+			</div>
+			</s_sidebar_element>
+
+			<div class="clear"></div>
+
+			<div id="foot">
+				<div class="powered">Powered by <a href="http://www.tistory.com/" target="_blank">Tistory</a>, Designed by <a href="http://wallel.com/" target="_blank">wallel</a></div>
+				<div class="social">
+					<a href="http://nogadaworks.tistory.com/rss" target="_blank">Rss Feed</a> and
+					<a href="https://www.twitter.com/" target="_blank">Twitter</a>,
+					<a href="https://www.facebook.com/" target="_blank">Facebook</a>,
+					<a href="https://www.youtube.com/" target="_blank">Youtube</a>,
+					<a href="https://plus.google.com/" target="_blank">Google+</a>
+				</div>
+			</div>
+		</div> <!-- content-inner close -->
+	</div> <!-- content close -->
+</div> <!-- wrap close -->
+
+
+<div id="sidebar-toggle"><i class="icon-reorder"></i></div>
+<script src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/jquery-1.11.3.min.js.다운로드"></script>
+<script src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/common.js(1).다운로드"></script>
+<script src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/jquery.mCustomScrollbar.concat.min.js.다운로드"></script>
+<script>
+$(document).ready(function () {
+	if ($('body').width() > "960") {
+		$("#sidebar").mCustomScrollbar({
+			theme: "dark-thin",
+			autoHideScrollbar: "true"
+		});
+	};
+});
+</script>
+<script src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/ygal-edit.js.다운로드"></script>
+<script src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/search_dragselection.min.20170308053514.js.다운로드"></script>
+<script src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/lightbox.min.js.다운로드"></script><div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href="http://nogadaworks.tistory.com/50?category=798334"></a><a class="lb-next" href="http://nogadaworks.tistory.com/50?category=798334"></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div>
+	<script>
+	    lightbox.option({
+			"fadeDuration": 200,
+		    "resizeDuration": 200,
+		    "wrapAround": false,
+			"albumLabel": "%1 / %2",
+			"fitImagesInViewport":true ,
+			"stopEvent": false
+	    })
+	</script><script type="text/javascript">
+var _tiq = 'undefined' !== typeof _tiq ? _tiq : [];
+_tiq.push(['__setConfig', {enableScroll:true, enableClick:true, enableButton:true}]);
+_tiq.push(["__setParam", "svcdomain", "user.tistory.com"]);
+(function(d) {
+	var se = d.createElement('script'); se.type = 'text/javascript'; se.async = true;
+	se.src = location.protocol + '//m2.daumcdn.net/tiara/js/td.min.js';
+	var s = d.getElementsByTagName('head')[0]; s.appendChild(se);
+})(document);
+_tiq.push(['__setParam', 'param_ex', JSON.stringify({"userId":"3713197","blogId":"2816583","entryId":"50"})]);
+_tiq.push(['__trackPageview']);
+_tiq.push(['__content', 't_content', {
+'c_id':'2816583_50', 
+'c_title':'ROOTCTF%201%ED%9A%8C%20WriteUP', 
+'type':'article', 
+'author':'', 
+'author_id':'3713197', 
+'cp':'JunhoYeo', 
+'cp_id':'2816583', 
+'regdata':'2017-12-25 00:43:27', 
+'plink':'http://nogadaworks.tistory.com/50', 
+'media':'pcweb', 
+}]);
+var addEvent = function (evt, fn) { window.addEventListener ? window.addEventListener(evt, fn, false) : window.attachEvent('on' + evt, fn); };
+var removeEvent = function(evt, fn) { window.removeEventListener ? window.removeEventListener(evt, fn, false) : window.detachEvent('on' + evt, fn);};
+var ua = navigator.userAgent.toLowerCase(); var isIOS = /iP[ao]d|iPhone/i.test(ua);
+var contentExStat = function() {
+		_tiq.push(['__content', 't_content_ex', {
+			'data_type':'usage'
+, 'meta': {
+'c_id':'2816583_50', 
+'c_title':'ROOTCTF%201%ED%9A%8C%20WriteUP', 
+'type':'article', 
+'author':'', 
+'author_id':'3713197', 
+'cp':'JunhoYeo', 
+'cp_id':'2816583', 
+'regdata':'2017-12-25 00:43:27', 
+'plink':'http://nogadaworks.tistory.com/50', 
+'media':'pcweb', 
+}
+}]);
+		removeEvent(isIOS ? 'pagehide' : 'beforeunload', contentExStat);
+};
+addEvent(isIOS ? 'pagehide' : 'beforeunload', contentExStat);
+</script>
+<script type="text/javascript">window.roosevelt_params_queue = window.roosevelt_params_queue || []; window.roosevelt_params_queue.push({channel_id: "dk", channel_label: 'tistory'});</script>
+<script type="text/javascript" src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/roosevelt_dk_bt.js.다운로드" async=""></script><script type="text/javascript">if(window.console!=undefined){setTimeout(console.log.bind(console,"%cTISTORY","font:8em Arial;color:#EC6521;font-weight:bold"),0);setTimeout(console.log.bind(console,"%c  나를 표현하는 블로그","font:2em sans-serif;color:#333;"),0);}</script><iframe style="position:absolute;width:1px;height:1px;left:-100px;top:-100px" src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/api.html" id="editEntry"></iframe>		<div id="tistorytoolbarid" style="position:absolute;height:25px; top:4px;right:4px;background-color:transparent;background-image:none;z-index:11;">
+			<div class="tistorytoolbar tt_menubar_white tt_menubar_chrome_browser">
+				<div id="ttMenubarInnerWrap" class="tt_menubar_inner">
+					<div class="tt_menubar_bg_toolbar"></div>
+					<h2 style="display:none;">티스토리 툴바</h2>
+					<div class="tt_menubar_item tt_menubar_mainmenu"><a class="tt_menubar_link_tit tt_menubar_link_tit_eng" href="http://www.tistory.com/">Tistory</a>
+					</div>
+					<div class="tt_menubar_item tt_menubar_bg_bar"></div>
+					<div class="tt_menubar_item tt_menubar_myblog">
+						<span class="tt_menubar_expander tt_menubar_link_tit tt_menubar_link_tit_eng tt_menubar_ico_blogmenu">My<span class="tt_menubar_ico_arrow">▼</span></span>
+						<div class="tt_menubar_box_list tt_menubar_box_list" style="left:50px;">
+							<ul class="tt_menubar_list_blogmenu">
+																	<li>
+										<a href="http://nogadaworks.tistory.com/" class="tt_menubar_link">JunhoYeo</a>
+										<span class="tt_menubar_box_btn">
+								<a href="http://nogadaworks.tistory.com/admin/">관리</a>
+								<span class="tt_menubar_txt_bar">|</span>
+								<a href="http://nogadaworks.tistory.com/admin/entry/post/">쓰기</a>
+							</span>
+									</li>
+																	<li>
+										<a href="http://ngworks-3578.tistory.com/" class="tt_menubar_link">TheNogadaWor..</a>
+										<span class="tt_menubar_box_btn">
+								<a href="http://ngworks-3578.tistory.com/admin/">관리</a>
+								<span class="tt_menubar_txt_bar">|</span>
+								<a href="http://ngworks-3578.tistory.com/admin/entry/post/">쓰기</a>
+							</span>
+									</li>
+															</ul>
+						</div>
+					</div>
+					<div class="tt_menubar_item tt_menubar_bg_bar"></div>
+					<div class="tt_menubar_item tt_menubar_mylink">
+						<span class="tt_menubar_expander tt_menubar_link_tit tt_menubar_ico_blogmenu">바로가기<span class="tt_menubar_ico_arrow">▼</span></span>
+
+						<div class="tt_menubar_box_list tt_menubar_box_mylink" style="left:92px;">
+							<div class="tt_menubar_box_opt">
+								<select id="ttMenubarBlogSelectorForLink">
+																			<option value="2816583">JunhoYeo</option>
+																			<option value="2811101">TheNogadaWorks</option>
+																	</select>
+							</div>
+
+							<div class="tt_menubar_box_list">
+								<ul class="tt_menubar_list_mylink">
+									<li class="tt_menubar_fst tt_menubar_on">
+										<div class="tt_menubar_cont">
+											<ul class="tt_menubar_list_link">
+																							</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+														<div class="tt_menubar_box_control">
+								<a href="http://nogadaworks.tistory.com/manage/link/my" id="menubar" class="tt_menubar_edit">관리 <img src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/s.gif" alt="" class="tt_menubar_bg_tistorylayer tt_menubar_bg_linkarr"></a>
+							</div>
+													</div>
+					</div>
+
+					<div class="tt_menubar_item tt_menubar_bg_bar"></div>
+					<div class="tt_menubar_item tt_menubar_thisblog">
+						<span class="tt_menubar_expander tt_menubar_link_tit tt_menubar_ico_blogmenu">이 블로그를<span class="tt_menubar_ico_arrow">▼</span></span>
+						<div class="tt_menubar_box_list tt_menubar_box_list" style="left:150px;">
+							<ul class="tt_menubar_list_blogmenu">
+								<li><a class="tt_add_link" href="http://nogadaworks.tistory.com/toolbar/popup/link/" data-alert="내블로그는 링크에 추가할수 없습니다.">내
+										링크에 추가</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="tt_menubar_item tt_menubar_bg_bar"></div>
+					<div class="tt_menubar_item tt_menubar_random">
+						<a href="http://nogadaworks.tistory.com/randomblog" class="tt_menubar_link_tit">랜덤</a>
+					</div>
+
+					<div class="tt_menubar_item tt_menubar_bg_bar"></div>
+					<div class="tt_menubar_item tt_menubar_logout">
+						<a href="https://www.tistory.com/member" class="tt_menubar_link_tit">계정관리</a>
+					</div>
+
+					<div class="tt_menubar_item tt_menubar_bg_bar"></div>
+					<div class="tt_menubar_item tt_menubar_logout">
+						<a href="https://www.tistory.com/auth/logout/?redirectUrl=http%3A%2F%2Fnogadaworks.tistory.com%2F50%3Fcategory%3D798334" class="tt_menubar_link_tit">로그아웃</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="margin:0px; padding:0px; border:none; background:none; float:none; clear:none; z-index:0"></div>
+		<script type="text/javascript" src="./ROOTCTF 1회 WriteUP __ JunhoYeo_files/menubar.js.다운로드"></script>
+		<div id="layer_sns" class="layer_sns">
+        <div class="bg_layer" onclick="tistorySns.hide(); return false;"></div>
+        <ul class="list_sns">
+            <li><a class="ico_sns ico_fb" data-service="facebook">페이스북 공유하기</a></li>
+            <li style="display: none;"><a class="ico_sns ico_kt">카카오톡 공유하기</a></li>
+            <li><a class="ico_sns ico_ks" data-service="kakaostory">카카오스토리 공유하기</a></li>
+            <li><a class="ico_sns ico_tw" data-service="twitter">트위터 공유하기</a></li>
+        </ul>
+        <button type="button" class="btn_close" onclick="tistorySns.hide(); return false;"><span class="ico_sns ico_close">sns공유하기 레이어 닫기</span></button>
+    </div>
+
+</body></html>

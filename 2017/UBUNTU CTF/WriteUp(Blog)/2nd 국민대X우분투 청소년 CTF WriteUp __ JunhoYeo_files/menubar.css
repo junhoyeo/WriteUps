@@ -1,0 +1,125 @@
+@CHARSET "UTF-8";
+
+.tistorytoolbar a {font-weight:normal;text-decoration:none;}
+.tistorytoolbar div {background:none;}
+.tistorytoolbar .tt_menubar_bg_toolbar {position:absolute;left:0;top:0;width:372px;height:26px;font:0/0 Arial;z-index:-1; border-radius:5px}
+.tt_menubar_custom .tt_menubar_bg_toolbar {border-radius:4px;-moz-border-radius:4px;}
+.tistorytoolbar .tt_menubar_close .tt_menubar_bg_toolbar {display:none;}
+
+.tistorytoolbar .tt_menubar_bg_tistorylayer {background:url(//t1.daumcdn.net/tistory_admin/static/admin/new/bg_tistorylayer.gif) 0 0 no-repeat;vertical-align:middle;}
+.tistorytoolbar .tt_menubar_bg_linkarr {width:3px;height:5px;margin-top:-2px;background-position:-10px -5px;}
+.tistorytoolbar .tt_menubar_bg_linknew {width:9px;height:9px;margin-top:-2px;background-position:0 -5px;}
+.tistorytoolbar .tt_menubar_btn_mylink {width:120px;height:23px;border:0 none;background-position:-20px 0;text-indent:-999em;}
+.tt_menubar_whiteBar .tt_menubar_bg_toolbar {background:url(//t1.daumcdn.net/tistory_admin/static/admin/new/box_w01.png) no-repeat;_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//t1.daumcdn.net/tistory_admin/static/admin/new/box_w01.png',sizingMethod='image');}
+.tt_menubar_whiteSemiBar .tt_menubar_bg_toolbar {background:url(//t1.daumcdn.net/tistory_admin/static/admin/new/box_w02.png) no-repeat;_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//t1.daumcdn.net/tistory_admin/static/admin/new/box_w02.png',sizingMethod='image');}
+.tt_menubar_blackBar .tt_menubar_bg_toolbar {background:url(//t1.daumcdn.net/tistory_admin/static/admin/new/box_d01.png) no-repeat;_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//t1.daumcdn.net/tistory_admin/static/admin/new/box_d01.png',sizingMethod='image');}
+.tt_menubar_blackSemiBar .tt_menubar_bg_toolbar {background:url(//t1.daumcdn.net/tistory_admin/static/admin/new/box_d02.png) no-repeat;_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//t1.daumcdn.net/tistory_admin/static/admin/new/box_d02.png',sizingMethod='image');}
+
+.tt_menubar_login .tt_menubar_whiteBar .tt_menubar_bg_toolbar {background:url(//t1.daumcdn.net/tistory_admin/static/admin/new/box_w01_logout.png) no-repeat;_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//t1.daumcdn.net/tistory_admin/static/admin/new/box_w01_logout.png',sizingMethod='image');}
+.tt_menubar_login .tt_menubar_whiteSemiBar .tt_menubar_bg_toolbar {background:url(//t1.daumcdn.net/tistory_admin/static/admin/new/box_w02_logout.png) no-repeat;_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//t1.daumcdn.net/tistory_admin/static/admin/new/box_w02_logout.png',sizingMethod='image');}
+.tt_menubar_login .tt_menubar_blackBar .tt_menubar_bg_toolbar {background:url(//t1.daumcdn.net/tistory_admin/static/admin/new/box_d01_logout.png) no-repeat;_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//t1.daumcdn.net/tistory_admin/static/admin/new/box_d01_logout.png',sizingMethod='image');}
+.tt_menubar_login .tt_menubar_blackSemiBar .tt_menubar_bg_toolbar {background:url(//t1.daumcdn.net/tistory_admin/static/admin/new/box_d02_logout.png) no-repeat;_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//t1.daumcdn.net/tistory_admin/static/admin/new/box_d02_logout.png',sizingMethod='image');}
+
+.tt_menubar_whiteBar .tt_menubar_inner .tt_menubar_link_tit {color:#7b7b7b;}
+.tt_menubar_whiteSemiBar .tt_menubar_inner .tt_menubar_link_tit {color:#787878;}
+.tt_menubar_white .tt_menubar_inner .tt_menubar_link_tit {color:#7d7d7d;}
+
+.tt_menubar_blackBar .tt_menubar_inner .tt_menubar_link_tit {color:#bdbdbd;}
+.tt_menubar_blackSemiBar .tt_menubar_inner .tt_menubar_link_tit {color:#adadad;}
+.tt_menubar_black .tt_menubar_inner .tt_menubar_link_tit {color:#a8a8a8;}
+
+.tt_menubar_white .tt_menubar_inner .tt_menubar_bg_bar,
+.tt_menubar_whiteSemiBar .tt_menubar_inner .tt_menubar_bg_bar,
+.tt_menubar_whiteBar .tt_menubar_inner .tt_menubar_bg_bar {background-color:#000;opacity:0.16;filter:alpha(opacity=16);}
+
+.tt_menubar_black .tt_menubar_inner .tt_menubar_bg_bar,
+.tt_menubar_blackSemiBar .tt_menubar_inner .tt_menubar_bg_bar,
+.tt_menubar_blackBar .tt_menubar_inner .tt_menubar_bg_bar {background-color:#fff;opacity:0.2;filter:alpha(opacity=20);}
+
+.tt_menubar_whiteBar .tt_menubar_inner .tt_menubar_link_tit:hover,
+.tt_menubar_whiteBar .tt_menubar_inner .tt_menubar_on .tt_menubar_link_tit,
+.tt_menubar_whiteSemiBar .tt_menubar_inner .tt_menubar_link_tit:hover,
+.tt_menubar_whiteSemiBar .tt_menubar_inner .tt_menubar_on .tt_menubar_link_tit,
+.tt_menubar_white .tt_menubar_inner .tt_menubar_link_tit:hover,
+.tt_menubar_white .tt_menubar_inner .tt_menubar_on .tt_menubar_link_tit {color:#3f3f3f;}
+.tt_menubar_blackBar .tt_menubar_inner .tt_menubar_link_tit:hover,
+.tt_menubar_blackBar .tt_menubar_inner .tt_menubar_on .tt_menubar_link_tit,
+.tt_menubar_blackSemiBar .tt_menubar_inner .tt_menubar_link_tit:hover,
+.tt_menubar_blackSemiBar .tt_menubar_inner .tt_menubar_on .tt_menubar_link_tit,
+.tt_menubar_black .tt_menubar_inner .tt_menubar_link_tit:hover,
+.tt_menubar_black .tt_menubar_inner .tt_menubar_on .tt_menubar_link_tit {color:#f8f8f8;}
+
+.tistorytoolbar .tt_menubar_inner {float:left;position:relative;width:371px;height:21px;padding:5px 0 0 10px;}
+.tistorytoolbar .tt_menubar_inner .tt_menubar_bg_bar {overflow:hidden;float:left;width:1px;height:8px;margin:4px 7px 0;font-size:0;line-height:0;display:inline;}
+.tistorytoolbar .tt_menubar_inner .tt_menubar_link_tit {float:left;padding-top:2px;font-size:11px;vertical-align:top;line-height:13px;height:22px;cursor:pointer;font-family:"돋움",Dotum,sans-serif;letter-spacing:-2px;display:inline;background:none;}
+.tistorytoolbar .tt_menubar_inner .tt_menubar_link_tit_daum {font-weight:bold;}
+.tistorytoolbar .tt_menubar_inner .tt_menubar_link_tit_eng {font-family:tahoma,sans-serif;padding-top:1px;letter-spacing:0;}
+.tistorytoolbar .tt_menubar_inner .tt_menubar_link_tit:hover,
+.tistorytoolbar .tt_menubar_inner .tt_menubar_on .tt_menubar_link_tit {text-decoration:none;}
+
+.tistorytoolbar .tt_menubar_inner .tt_menubar_box_list {display:none;position:absolute;top:26px;left:0;}
+.tistorytoolbar .tt_menubar_on .tt_menubar_box_list {display:block;}
+.tistorytoolbar .tt_menubar_inner .tt_menubar_list_blogmenu {float:left;padding:2px 1px;border:1px solid #9d9d9d;background-color:#fff;font-size:0;line-height:0;margin:0;}
+.tistorytoolbar .tt_menubar_inner .tt_menubar_list_blogmenu li {list-style:none;}
+.tistorytoolbar .tt_menubar_inner .tt_menubar_list_blogmenu a {display:block;padding:0 6px;font-size:11px;line-height:20px;letter-spacing:-1px;text-decoration:none;color:#666;}
+.tistorytoolbar .tt_menubar_inner .tt_menubar_list_blogmenu .tt_menubar_hover {background-color:#f5f5f5;}
+.tistorytoolbar .tt_menubar_inner .tt_menubar_list_blogmenu .tt_menubar_hover a {color:#f25b00;background-color:#f5f5f5;text-decoration:none;}
+.tistorytoolbar .tt_menubar_inner .tt_menubar_list_blogmenu a:hover {color:#f25b00;background-color:#f5f5f5;text-decoration:none;}
+.tistorytoolbar .tt_menubar_mainmenu {float:left;}
+.tistorytoolbar .tt_menubar_thisblog {float:left;}
+.tistorytoolbar .tt_menubar_thisblog .tt_menubar_list_blogmenu a {width:67px;}
+
+.tistorytoolbar .tt_menubar_myblog {float:left;}
+.tistorytoolbar .tt_menubar_myblog .tt_menubar_list_blogmenu {width:192px;}
+.tistorytoolbar .tt_menubar_myblog .tt_menubar_list_blogmenu li {float:left;width:189px;padding-right:3px;}
+.tistorytoolbar .tt_menubar_myblog .tt_menubar_box_list .tt_menubar_link {float:left;width:125px;padding:0 0 0 6px;}
+.tistorytoolbar .tt_menubar_myblog .tt_menubar_box_list .tt_menubar_box_btn {float:right;}
+.tistorytoolbar .tt_menubar_myblog .tt_menubar_box_list .tt_menubar_box_btn a {display:inline;padding:0 3px;color:#989898;}
+.tistorytoolbar .tt_menubar_myblog .tt_menubar_box_list .tt_menubar_box_btn a:hover {color:#000000;text-decoration:none;}
+.tistorytoolbar .tt_menubar_myblog .tt_menubar_box_list .tt_menubar_box_btn .tt_menubar_txt_bar {font-size:11px;line-height:20px;color:#ccc;}
+.tistorytoolbar .tt_menubar_warp_mylink {float:left;}
+
+.tistorytoolbar .tt_menubar_inner .tt_menubar_arr {float:right;padding:1px 7px 0 0;}
+.tistorytoolbar .tt_menubar_inner .tt_menubar_arr .tt_menubar_btn_arr {display:block;overflow:hidden;float:left;width:9px;height:12px;margin:0;padding:0;text-indent:-9999px;cursor:pointer;}
+.tistorytoolbar .tt_menubar_close {background:none;}
+.tistorytoolbar .tt_menubar_close .tt_menubar_mainmenu,
+.tistorytoolbar .tt_menubar_close .tt_menubar_myblog,
+.tistorytoolbar .tt_menubar_close .tt_menubar_mylink,
+.tistorytoolbar .tt_menubar_close .tt_menubar_thisblog,
+.tistorytoolbar .tt_menubar_close .tt_menubar_random,
+.tistorytoolbar .tt_menubar_close .tt_menubar_logout,
+.tistorytoolbar .tt_menubar_close .tt_menubar_bg_bar {display:none;}
+
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink {display:none;position:absolute;top:26px;overflow:hidden;width:218px;max-height:413px;border:1px solid #9d9d9d;background-color:#fff;}
+.tistorytoolbar .tt_menubar_on .tt_menubar_box_mylink {display:block;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_opt {width:100%;height:32px;border-bottom:1px solid #ebebeb;background-color:#f5f5f5;text-align:center;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_opt select {width:206px;margin:0 auto;margin-top:6px;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_list {position:relative;overflow:hidden;overflow-y:scroll;width:218px;height:348px;font-size:0;line-height:0;top:0;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_list ul {padding:0;margin:0;list-style:none;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_list .tt_menubar_list_mylink li {position:relative;padding-bottom:6px;border-top:1px solid #efefef;overflow:hidden;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_list .tt_menubar_tit {overflow:hidden;width:100%;height:26px;font:12px/14px dotum,sans-serif;color:#444;letter-spacing:-1px;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_list .tt_menubar_tit a {display:block;width:100%;height:18px;padding-top:10px;text-indent:9px;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_list .tt_menubar_tit .tt_menubar_num {padding-left:4px;letter-spacing:0;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_list .tt_menubar_tit .tt_menubar_bg_linkopenclose {width:8px;height:4px;margin-top:-2px;background-position:0 0;position:absolute;top:16px;left:183px;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_list .tt_menubar_cont {display:none;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_list .tt_menubar_on .tt_menubar_cont {display:block;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_list .tt_menubar_on .tt_menubar_tit .tt_menubar_bg_linkopenclose {background-position:-10px 0;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_list .tt_menubar_cont .tt_menubar_list_link li {padding:0;border:0 none;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_list .tt_menubar_cont .tt_menubar_list_link li a {display:block;width:100%;height:14px;padding:4px 0 3px;font:12px/14px dotum,sans-serif;color:#666;text-indent:9px;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_list .tt_menubar_cont .tt_menubar_list_link li a:hover {color:#f25b00;background-color:#f5f5f5;text-decoration:none;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_control {position:relative;overflow:hidden;width:100%;height:13px;padding:7px 0;border-top:1px solid #d6d6d6;text-align:center;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_control a {font:11px/13px dotum,sans-serif;color:#aaa;letter-spacing:-1px;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_control a.tt_menubar_on {color:#444;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_control .tt_menubar_txt_bar {padding:0 2px;font-size:11px;line-height:13px;color:#ddd;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_control .tt_menubar_edit {position:absolute;top:9px;right:9px;color:#888;text-decoration:underline;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_txt {font:12px/18px dotum,sans-serif;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_txt .tt_menubar_tit {display:block;width:auto;height:auto;margin:117px 31px 0;line-height:16px;font-weight:bold;color:#444;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_txt .tt_menubar_txt {display:block;margin:6px 31px 0 30px;color:#999;}
+.tistorytoolbar .tt_menubar_mylink .tt_menubar_box_mylink .tt_menubar_box_txt .tt_menubar_btn_mylink {margin:11px 0 0 32px;}
+
+.tistorytoolbar .tt_menubar_random {float:left;}
+.tistorytoolbar .tt_menubar_logout {float:left;white-space:nowrap;}
+.tt_menubar_login .tt_menubar_inner {width:95px;}
+.tt_menubar_login .tt_menubar_bg_toolbar {width:95px; border-radius:5px}
+.tistorytoolbar .tt_menubar_link_tit .tt_menubar_ico_arrow {font:7px '돋움',dotum,sans-serif !important;opacity:0.45;filter:alpha(opacity=45);margin-left:3px;letter-spacing:0;}
+.tt_menubar_chrome_browser .tt_menubar_link_tit .tt_menubar_ico_arrow {font:7px tahoma,sans-serif !important;}

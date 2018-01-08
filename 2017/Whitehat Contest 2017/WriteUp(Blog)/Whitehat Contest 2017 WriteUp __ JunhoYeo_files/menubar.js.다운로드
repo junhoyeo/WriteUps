@@ -1,0 +1,135 @@
+var tistoryToolbarControl = {
+	tistoryToolbarWrap: daum.$('tistorytoolbarid'),
+	groupListIdPrefix: 'groupList',
+	groupTitleIdPrefix: 'groupTitle',
+	pagePrefix: 'TistoryMenubarMyLinkPage',
+	expandedLayer: null,
+	linkWrap: null,
+
+	init: function() {
+		var expanders = daum.$$('.tt_menubar_expander', this.tistoryToolbarWrap);
+		for (var i = expanders.length; i--;) {
+			daum.Event.addEvent(expanders[i], 'click', this.showLayer.bind(this, expanders[i].parentNode));
+		}
+	},
+
+	initLink: function(wrap) {
+		var blogSelector = daum.$('ttMenubarBlogSelectorForLink');
+		if (!daum.Event.hasObserver(blogSelector, 'change')) {
+			var groupTitles = daum.$$('.tt_menubar_group_title', wrap);
+			for (var i = groupTitles.length; i--;) {
+				daum.Event.addEvent(groupTitles[i], 'click', this.toggleLinkGroup.bind(this, groupTitles[i]));
+			}
+			daum.Event.addEvent(blogSelector, 'change', this.changeBlogForLink.bind(this, blogSelector));
+			var pageWrap = daum.$('TistoryMenubarMyLinkPageWrap');
+			if (pageWrap) {
+				daum.Event.addEvent(pageWrap, 'click', this.pageMove.bind(this));
+			}
+		}
+	},
+
+	showLayer: function(elem, e) {
+		daum.Event.stopEvent(e);
+		var expandedLayer = this.expandedLayer;
+		if (expandedLayer) {
+			daum.Element.removeClassName(expandedLayer, 'tt_menubar_on');
+		}
+		if (!daum.Event.hasObserver(elem, 'mouseout')) {
+			daum.Event.addEvent(elem, 'mouseout', this.hideLayer.bind(this, elem));
+		}
+		if (daum.Element.hasClassName(elem, 'tt_menubar_mylink')) {
+			this.initLink(elem);
+		} else if (daum.Element.hasClassName(elem, 'tt_menubar_thisblog')) {
+			var actionWrap = daum.$$('.tt_menubar_list_blogmenu', elem)[0];
+			if (!daum.Event.hasObserver(actionWrap, 'click')) {
+				daum.Event.addEvent(actionWrap, 'click', this.openPopup.bind(this));
+			}
+		}
+		daum.Element.addClassName(elem, 'tt_menubar_on');
+		this.expandedLayer = elem;
+	},
+
+	pageMove: function(e) {
+		daum.Event.stopEvent(e);
+		var targetElem = daum.Event.getElement(e);
+		if (daum.Element.hasClassName(targetElem, 'tt_menubar_on')) {
+			this.changeBlogForLink(daum.$('ttMenubarBlogSelectorForLink'), targetElem.id.split(this.pagePrefix).join(''));
+		}
+	},
+
+	openPopup: function(e) {
+		daum.Event.stopEvent(e);
+		var targetElem = daum.Event.getElement(e);
+		if (targetElem.getAttribute('data-alert')) {
+			alert(targetElem.getAttribute('data-alert'));
+		}
+		else {
+			window.open(targetElem.href, 'tistoryThisBlogPopup', 'width=400, height=185, toolbar=no, menubar=no, status=no, scrollbars=no');
+		}
+	},
+
+	toggleLinkGroup: function(groupTitleElem) {
+		var groupId = groupTitleElem.id.split(this.groupTitleIdPrefix).join('');
+		var groupElem = daum.$(this.groupListIdPrefix + groupId);
+		if (daum.Element.hasClassName(groupElem, 'tt_menubar_on')) {
+			daum.Element.removeClassName(groupElem, 'tt_menubar_on');
+		} else {
+			daum.Element.addClassName(groupElem, 'tt_menubar_on');
+		}
+	},
+
+	changeBlogForLink: function(selector, page) {
+		var pageParam = typeof(page) == 'string' ? '&page=' + page : '';
+		if (this.linkWrap) {
+			var linkWrap = this.linkWrap;
+		} else {
+			var linkWrap = this.linkWrap = daum.$$('.tt_menubar_list_link', this.tistoryToolbarWrap)[0];
+		}
+		var _this = this;
+		new daum.Ajax({
+			url: '/manage/link/blog/' + selector.value + ".json",
+			method: 'GET',
+			paramString: 'blogId=' + selector.value + pageParam,
+			onsuccess: function(r) {
+				var i, html = "", results = daum.jsonToObject(r.responseText);
+				for (i = 0 ; i < results.length ; i++) {
+					var result = results[i];
+					html += "<li><a href='" + result.url + "'>" + result.linkName + "</a></li>"
+				}
+				linkWrap.innerHTML = html;
+			},
+			onfailure: function(r) {
+				var result = daum.jsonToObject(r.responseText);
+				alert(result.data);
+				if (result && result.requireLogin) {
+					window.open(TOP_SSL_URL + '/auth/login/?redirectUrl=CLOSE_WINDOW', 'tistoryLoginPopup', 'width=600, height=600, toolbar=no, menubar=no, status=no, scrollbars=no');
+				}
+			},
+			onabort: function() {
+				alert('응답이 없습니다. 다시 실행부탁드립니다.');
+			}
+		}).request();
+	},
+
+	hideLayer: function(elem, e) {
+		var related = e.relatedTarget || e.toElement;
+		if (related && related != this.tistoryToolbarWrap && !this.isAChildOf(elem, related)) {
+			daum.Element.removeClassName(elem, 'tt_menubar_on');
+		}
+	},
+
+	isAChildOf: function(_parent, _child) {
+		if (_parent === _child) {
+			return false;
+		}
+		try {
+			while(_child && _child !== _parent) {
+				_child = _child.parentNode;
+			}
+		} catch(e){
+			return false;
+		}
+		return _child === _parent;
+	}
+}
+tistoryToolbarControl.init();
