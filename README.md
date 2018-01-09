@@ -15,7 +15,7 @@ WriteUp files from CTF(Capture The Flag) contests, wargames, etc
 요즘 정보보안에 빠져서 많이는 안 하지만 그래도 심심할 때 하면 재밌더라고요 :)
 잘은 못해도 즐기면서 하려고 노력하고 있답니다!
 - codeup.kr : <코드업> 문제풀이입니다.
-- acmicpc.net : <백준 온라인 저지> 문제풀이입니다.
+- acmicpc.net : <백준 온라인 저지(BOJ)> 문제풀이입니다.
 - NYPC : <넥슨 청소년 프로그래밍 챌린지> 문제풀입니다.
 
 ## CTF
@@ -28,7 +28,7 @@ CTF는 Capture The Flag의 약자로, 문제에서 주어지는 파일이나 웹
 - 네트워크(Network) : 와이어샤크(Wireshark)로 패킷(Packet)을 분석하는 문제들이 많습니다.
 - MISC(기타) : 주로 재미를 위한 문제(for fun), 게싱(Guessing), 프로그래밍(Progamming) 아니면 걍 다른 범주에 들지 않는 문제들이 여기로 분류됩니다. 해킹의 역사, 유명 취약점 그런 퀴즈도 가끔 나오고 해요.
 
-## wargames
+## Wargames
 요즘은 알고리즘 트레이닝보다 이걸 많이 하는데 수준에 맞거나 Challanging한 해킹 문제를 시간에 관계없이 풀어볼 수 있어서 좋은 것 같습니다. 자세한 설명은 곧 추가할 예정!이랍니다~ㅎㅎ
 - 해커스쿨 FTZ / LOB
 - webhacking.kr
