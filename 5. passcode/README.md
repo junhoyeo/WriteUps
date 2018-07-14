@@ -1,5 +1,12 @@
 # passcode exploit 
 
+## vul
+취약점은 `scanf("%d", passcode1);`에서 발생한다. C언어의 `scanf()` 함수는 입력받을 문자열의 포맷과 문자열을 저장할 주소값을 인수로 받는다.
+
+개발자는 문자열을 입력받아 변수 `passcode`에 저장하고 싶었을 것이다. 그러나 변수 `passcode`가 위치한 주소인 `&passcode`가 아니라 그냥 변수 `passcode`를 전달해 버려서 결국엔 `passcode`의 값 위치에 있는 엉뚱한 곳에 문자열이 저장되게 된다.
+
+## code
+
 ```
  junhoyeo@Macbookui-MacBook-Pro  ~/Documents/pwnable.kr/5. passcode   master ●  python2 exploit.py2
 [+] Connecting to pwnable.kr on port 2222: Done
