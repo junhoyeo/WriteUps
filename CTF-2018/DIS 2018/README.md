@@ -61,6 +61,10 @@ With **@uhmtoto**, **@cokia**, **@gtg7784**
 ## CRYPTOGRAPHY
 
 ### Canada : 7Jqw66as64KY6528IOyXreyCrCDsho0g66qo65OgIOuCmOudvOydmCDqsbTqta3sl7Drj4Trpbwg642U7ZWY7Iuc7Jik
+https://github.com/gtg7784/Write-Ups/tree/master/DIS-CTF#jqw66as64ky6528ioyxreycrcdsho0g66qo65ogioucmoudvoydmcdqsbtqta3sl7drj4trpbwg642u7zwy7iuc7jik---cryptography
+
+아래처럼 파이썬으로도 슥삭할 수 있다. 
+
 ```python
 >>> import base64
 >>> base64.b64decode('7Jqw66as64KY6528IOyXreyCrCDsho0g66qo65OgIOuCmOudvOydmCDqsbTqta3sl7Drj4Trpbwg642U7ZWY7Iuc7Jik').decode().replace(' ', '_')
@@ -104,6 +108,9 @@ With **@uhmtoto**, **@cokia**, **@gtg7784**
 ### Argentina : Compare!
 
 ### Germany : How many languages do you know?
+https://github.com/gtg7784/Write-Ups/tree/master/DIS-CTF#how-many-languages-do-you-know---misc
+
+`FLAG{0H...Y0U_KN0W_W1NGD1NG!}`
 
 -----
 
@@ -112,6 +119,9 @@ With **@uhmtoto**, **@cokia**, **@gtg7784**
 ### Chad : Network 2
 
 ### Mongolia : network3
+https://github.com/gtg7784/Write-Ups/tree/master/DIS-CTF#network-3---network
+
+`port scan`
 
 -----
 
@@ -140,6 +150,9 @@ ETH * 4 =?
 ## REVERSING
 
 ### Russia : EZ_REVERSING
+https://github.com/gtg7784/Write-Ups/tree/master/DIS-CTF#ez_reversing---reversing
+
+`real_flag`
 
 ### Spain : REVERGRAPHY
 https://github.com/JunhoYeo/for-dis-2018#problem-one-revergraphy-spain
