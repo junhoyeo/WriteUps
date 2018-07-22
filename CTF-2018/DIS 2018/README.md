@@ -11,7 +11,7 @@ With **@uhmtoto**, **@cokia**, **@gtg7784**
 > 롸업이 작성된 문제는 취소선을 그어주세요
 
 - CRYPTOGRAPHY
-    - ~~[x] Canada : 7Jqw66as64KY6528IOyXreyCrCDsho0g66qo65OgIOuCmOudvOydmCDqsbTqta3sl7Drj4Trpbwg642U7ZWY7Iuc7Jik~~
+    - [x] ~~Canada : 7Jqw66as64KY6528IOyXreyCrCDsho0g66qo65OgIOuCmOudvOydmCDqsbTqta3sl7Drj4Trpbwg642U7ZWY7Iuc7Jik~~
     - [ ] UK : N0oyOC8ldUI0RjEvZHAvJXVBQzAwLzZybWQvc2wvUHc9PQ==
     - [x] Zambia : dks7sud6gk8tp1dy7g6==
     - [ ] Tanzania : Mixed!
@@ -29,32 +29,31 @@ With **@uhmtoto**, **@cokia**, **@gtg7784**
     - [x] Ukraine : CERTCERTCERT
 
 - MISC
-    - [x] Argentina : Compare!
-    - [x] Germany : How many languages do you know?
+    - [x] ~~Germany : How many languages do you know?~~
     - [ ] Sudan : NOGADADA
 
 - NETWORK
     - [x] Chad : Network 2
-    - [x] Mongolia : network3
+    - [x] ~~Mongolia : network3~~
 
 - NONE ~~맛소금드립~~
-    - ~~[x] Mexico : ethereum~~
-    - ~~[x] Czech : Old Version..? Old Version?~~
+    - [x] ~~Mexico : ethereum~~
+    - [x] ~~Czech : Old Version..? Old Version?~~
 
 - REVERSING
-    - [x] Russia : EZ_REVERSING
-    - ~~[x] Spain : REVERGRAPHY~~
+    - [x] ~~Russia : EZ_REVERSING~~
+    - [x] ~~Spain : REVERGRAPHY~~
     - [ ] Australia - Reversing Problem
 
 - WEB
     - [x] Greenland : EZ_wb1
-    - ~~[x] US : comment~~
-    - ~~[x] Argentina : Compare!~~
-    - ~~[x] Burkina Faso : Another WEb?~~
-    - ~~[x] Algeria : cmp2~~
-    - ~~[x] Libya : Can you be the GOD? 😀~~
-    - ~~[x] Congo : Key Auth~~
-    - ~~[x] Kyrgyzstan : YEOEY~~
+    - [x] ~~US : comment~~
+    - [x] ~~Argentina : Compare!~~
+    - [x] ~~Burkina Faso : Another WEb?~~
+    - [x] ~~Algeria : cmp2~~
+    - [x] ~~Libya : Can you be the GOD? 😀~~
+    - [x] ~~Congo : Key Auth~~
+    - [x] ~~Kyrgyzstan : YEOEY~~
 
 -----
 
@@ -151,6 +150,8 @@ ETH * 4 =?
 
 ### Russia : EZ_REVERSING
 https://github.com/gtg7784/Write-Ups/tree/master/DIS-CTF#ez_reversing---reversing
+
+너무 슬펐다.
 
 `real_flag`
 
