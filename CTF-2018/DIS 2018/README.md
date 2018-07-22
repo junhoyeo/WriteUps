@@ -36,7 +36,7 @@ With **@uhmtoto**, **@cokia**, **@gtg7784**
     - [x] Chad : Network 2
     - [x] ~~Mongolia : network3~~
 
-- NONE ~~맛소금드립~~
+- NONE ~~맛소금님드립모음~~
     - [x] ~~Mexico : ethereum~~
     - [x] ~~Czech : Old Version..? Old Version?~~
 
@@ -158,6 +158,8 @@ https://github.com/gtg7784/Write-Ups/tree/master/DIS-CTF#ez_reversing---reversin
 ### Spain : REVERGRAPHY
 https://github.com/JunhoYeo/for-dis-2018#problem-one-revergraphy-spain
 
+변태문제라고 맞았다.
+
 `sendMe_ETH_0x07B8CedbE8Ab83F06DFAdC39991910A4544dE3A1`
 
 -----
@@ -178,6 +180,10 @@ https://github.com/uhmtoto/Write-Up/blob/master/DIS%20CTF%202018%20%EB%82%B4%EA%
 
 ### Burkina Faso : Another WEb?
 https://github.com/JunhoYeo/for-dis-2018#problem-two-another-web-burkina-faso
+
+![](https://github.com/JunhoYeo/for-dis-2018/blob/master/prob2/1.png?raw=true)
+
+`get_defined_vars());`를 쓰면 된다. 
 
 `I_us3_k1ng_G0d_l4n9_PHP_so_$ME!=="AHSSA"?????`
 
@@ -202,5 +208,9 @@ https://github.com/uhmtoto/Write-Up/blob/master/DIS%20CTF%202018%20%EB%82%B4%EA%
 
 ### Kyrgyzstan : YEOEY
 https://github.com/JunhoYeo/for-dis-2018#problem-sam-yeoey-kyrgyzstan
+
+![](https://github.com/JunhoYeo/for-dis-2018/blob/master/prob3/2.png?raw=true)
+
+헤더에 있다.
 
 `S0E4SY,huh,,,i_am_so_kind_i_9uess`
