@@ -1,12 +1,12 @@
 # DIS 2018 - We_Are_From_SWU (2st, 6714)
-![](./screenshotsscoreboard.png)
+![](./screenshots/scoreboard.png)
 
-With @uhmtoto, @cokia, @gtg7784
+With **@uhmtoto**, **@cokia**, **@gtg7784**
 
 2018.07.21
 
 ## Probs
-![](./screenshotsprobs.png)
+![](./screenshots/probs.png)
 
 > 롸업이 작성된 문제는 취소선을 그어주세요
 
