@@ -1,6 +1,6 @@
 # DIMICTF 본선 - 프라푸치노 (1st, 1609)
 
-![](./rank.png)
+![](./screenshots/rank.png)
 
 2017.07.20, 한국디지털미디어고등학교에서
 
