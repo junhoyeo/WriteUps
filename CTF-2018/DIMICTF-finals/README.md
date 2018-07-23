@@ -4,7 +4,7 @@
 
 2017.07.20, 한국디지털미디어고등학교에서
 
-## guess_return
+## guess_returns
 7바이트짜리 데이터 `2ykuozF`가 주어지는데, 문제에 bit 어쩌고하고 나오길래 바로 [bit.ly](http://bit.ly)를 연상해서 무려 1빠로 풀었다.
 
 [http://bit.ly/2LfMUys](http://bit.ly/2LfMUys)
