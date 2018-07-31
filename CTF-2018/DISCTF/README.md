@@ -3,39 +3,41 @@
 
 With **@uhmtoto**, **@cokia**, **@gtg7784**
 
+> 트로피와 갈축 기계식 키보드를 받았습니다! 와아아~!
+
 2018.07.21
 
 ## Probs
 ![](./screenshots/probs.png)
 
-> 롸업이 작성된 문제는 취소선을 그어주세요
-
-> 팀 롸업은 이걸로 얼른 제출해버리기 위해서 다른 팀원들이 푼 문제는 걍 링크를 걸어두었습니다. 푼 사람을 모르거나 팀원들이 롸업을 안 던져준 문제는 걍 제가 다시 풀고서 답을 썼습니다.
+> - ~~롸업이 작성된 문제는 취소선을 그어주세요~~ 다해따
+> - 팀 롸업은 이걸로 얼른 제출해버리기 위해서 다른 팀원들이 푼 문제는 따로 롸업이 있는 경우 링크를 걸어두었고, 없으면 걍 제가 다시 풀어서 풀이를 적었습니다.
+> - 와! 다 썼다!
 
 - CRYPTOGRAPHY
     - [x] ~~Canada : 7Jqw66as64KY6528IOyXreyCrCDsho0g66qo65OgIOuCmOudvOydmCDqsbTqta3sl7Drj4Trpbwg642U7ZWY7Iuc7Jik~~
     - [ ] UK : N0oyOC8ldUI0RjEvZHAvJXVBQzAwLzZybWQvc2wvUHc9PQ==
-    - [x] Zambia : dks7sud6gk8tp1dy7g6==
+    - [x] ~~Zambia : dks7sud6gk8tp1dy7g6==~~
     - [ ] Tanzania : Mixed!
 
 - FOR NEWBIE!
-    - [x] Guatemala : C....
-    - [x] Brazil : SuperDuper!
-    - [x] Mauritania : Over...
-    - [x] Angola : The kernel?
-    - [x] Yemen : Firewall?
-    - [x] China : Interpreter?
-    - [x] Malaysia : What is it?
+    - [x] ~~Guatemala : C....~~
+    - [x] ~~Brazil : SuperDuper!~~
+    - [x] ~~Mauritania : Over...~~
+    - [x] ~~Angola : The kernel?~~
+    - [x] ~~Yemen : Firewall?~~
+    - [x] ~~China : Interpreter?~~
+    - [x] ~~Malaysia : What is it?~~
 
 - FORENSIC
-    - [x] Ukraine : CERTCERTCERT
+    - [x] ~~Ukraine : CERTCERTCERT~~
 
 - MISC
     - [x] ~~Germany : How many languages do you know?~~
     - [ ] Sudan : NOGADADA
 
 - NETWORK
-    - [x] Chad : Network 2
+    - [x] ~~Chad : Network 2~~
     - [x] ~~Mongolia : network3~~
 
 - NONE ~~맛소금님드립모음~~
@@ -272,6 +274,9 @@ https://github.com/JunhoYeo/for-dis-2018#problem-one-revergraphy-spain
 ### WEB
 
 ### Greenland : EZ_wb1
+`flag.txt`에 있었다고 한다.
+
+`welcome_to_dis_web_hacking`
 
 ### US : comment
 https://github.com/uhmtoto/Write-Up/blob/master/DIS%20CTF%202018%20%EB%82%B4%EA%B0%80%EB%82%B8%20%EB%AC%B8%EC%A0%9C%EB%93%A4%20WRITE-UP%5Bpdf%5D.pdf
