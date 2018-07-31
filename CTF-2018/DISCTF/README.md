@@ -215,7 +215,7 @@ print (''.join([chr(int(data, 16)) for data in '79 6f 75 67 6f 74 69 74 21 66 6c
 ### Germany : How many languages do you know?
 https://github.com/gtg7784/Write-Ups/tree/master/DIS-CTF#how-many-languages-do-you-know---misc
 
-`FLAG{0H...Y0U_KN0W_W1NGD1NG!}`
+`0H...Y0U_KN0W_W1NGD1NG!`
 
 -----
 
