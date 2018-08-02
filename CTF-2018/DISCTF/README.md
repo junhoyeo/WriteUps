@@ -279,13 +279,11 @@ https://github.com/JunhoYeo/for-dis-2018#problem-one-revergraphy-spain
 `welcome_to_dis_web_hacking`
 
 ### US : comment
-https://github.com/uhmtoto/Write-Up/blob/master/DIS%20CTF%202018%20%EB%82%B4%EA%B0%80%EB%82%B8%20%EB%AC%B8%EC%A0%9C%EB%93%A4%20WRITE-UP%5Bpdf%5D.pdf
-
+https://github.com/uhmtoto/Write-Up/blob/master/DIS%20CTF%202018/DIS%20CTF%202018%20내가낸%20문제들%20WRITE-UP%5Bpdf%5D.pdf
 `!!!th1s_is_last_prob!!!`
 
 ### Argentina : Compare!
-https://github.com/uhmtoto/Write-Up/blob/master/DIS%20CTF%202018%20%EB%82%B4%EA%B0%80%EB%82%B8%20%EB%AC%B8%EC%A0%9C%EB%93%A4%20WRITE-UP%5Bpdf%5D.pdf
-
+https://github.com/uhmtoto/Write-Up/blob/master/DIS%20CTF%202018/DIS%20CTF%202018%20내가낸%20문제들%20WRITE-UP%5Bpdf%5D.pdf
 `MD5_cndehf`
 
 ### Burkina Faso : Another WEb?
@@ -293,13 +291,12 @@ https://github.com/JunhoYeo/for-dis-2018#problem-two-another-web-burkina-faso
 
 ![](https://github.com/JunhoYeo/for-dis-2018/blob/master/prob2/1.png?raw=true)
 
-`get_defined_vars());`를 쓰면 된다. 
+`get_defined_vars();`를 쓰면 된다. 
 
 `I_us3_k1ng_G0d_l4n9_PHP_so_$ME!=="AHSSA"?????`
 
 ### Algeria : cmp2
-https://github.com/uhmtoto/Write-Up/blob/master/DIS%20CTF%202018%20%EB%82%B4%EA%B0%80%EB%82%B8%20%EB%AC%B8%EC%A0%9C%EB%93%A4%20WRITE-UP%5Bpdf%5D.pdf
-
+https://github.com/uhmtoto/Write-Up/blob/master/DIS%20CTF%202018/DIS%20CTF%202018%20내가낸%20문제들%20WRITE-UP%5Bpdf%5D.pdf
 ![](./screenshots/cmp2.png)
 
 심심해서 [징그럽게 숏코딩된 익스플로잇](./exploit-cmp2.py)을 짜봤다.
@@ -307,13 +304,11 @@ https://github.com/uhmtoto/Write-Up/blob/master/DIS%20CTF%202018%20%EB%82%B4%EA%
 `1_l0v3_brut2f0rc3`
 
 ### Libya : Can you be the GOD? 😀
-https://github.com/uhmtoto/Write-Up/blob/master/DIS%20CTF%202018%20%EB%82%B4%EA%B0%80%EB%82%B8%20%EB%AC%B8%EC%A0%9C%EB%93%A4%20WRITE-UP%5Bpdf%5D.pdf
-
+https://github.com/uhmtoto/Write-Up/blob/master/DIS%20CTF%202018/DIS%20CTF%202018%20내가낸%20문제들%20WRITE-UP%5Bpdf%5D.pdf
 `u_aR3_r2a1_G0d!`
 
 ### Congo : Key Auth
-https://github.com/uhmtoto/Write-Up/blob/master/DIS%20CTF%202018%20%EB%82%B4%EA%B0%80%EB%82%B8%20%EB%AC%B8%EC%A0%9C%EB%93%A4%20WRITE-UP%5Bpdf%5D.pdf
-
+https://github.com/uhmtoto/Write-Up/blob/master/DIS%20CTF%202018/DIS%20CTF%202018%20내가낸%20문제들%20WRITE-UP%5Bpdf%5D.pdf
 `7J206rG466ee7LaU64uk64ulLg==`
 
 ### Kyrgyzstan : YEOEY
