@@ -1,0 +1,8 @@
+{
+    "python.linting.pylintEnabled": false,
+    "files.associations": {
+        "*.py2": "python",
+        "*.py3": "python"
+    },
+    "python.linting.enabled": false
+}
