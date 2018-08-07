@@ -1,1 +1,0 @@
-# SECCON 2017 CTF WriteUp
