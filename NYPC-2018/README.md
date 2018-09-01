@@ -1,3 +1,2 @@
-# NYPC 2018
+# NYPC 2018 (950)
 ![scoreboard](./scoreboard.png)
-점수(연습문제 제외) : **950**
