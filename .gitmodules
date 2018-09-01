@@ -1,0 +1,5 @@
+[submodule "NYPC-2018/Probs"]
+	path = NYPC-2018/Probs
+	url = https://github.com/maxswjeon/NYPC-Writeup-2018.git
+	path = NYPC-2018/probs
+	url = https://github.com/maxswjeon/NYPC-Writeup-2018.git
