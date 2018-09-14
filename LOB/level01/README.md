@@ -10,6 +10,13 @@ hello
 
 첫 번째 커맨드 라인 인수를 출력하는 프로그램이다.
 
+```
+[gate@localhost gate]$ ./gremlin hello world
+argv error
+```
+
+커맨드 라인 인수가 여러 개 주어지면 `argv error`가 출력된다.
+
 ### source?
 ```c
 /*
@@ -99,3 +106,5 @@ End of assembler dump.
 프로그램의 실행 흐름을 바꾸기 위해서는 `buffer`에서 BOF를 일으켜 `RET`을 쉘코드의 주소로 변조하면 될 것이다.
 
 즉 payload는 아무 문자 260개(`buffer[256] + SFP[4] = 260`) + 쉘코드 주소 => profit(아마)!!!
+
+물론 이건 환경변수를 이용했을 때 `RET`을 환경변수 주소로 변조하는 방법이고 `buffer` 공간 안에 `\x90`과 함께 쉘코드를 넣고 그쪽으로 흐름을 돌릴 수도 있겠다.
