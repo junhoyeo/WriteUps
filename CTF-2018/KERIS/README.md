@@ -95,7 +95,7 @@ Router(config)# enable password whoisthewinnerofkeris2018
 ### 3
 ```
 Router(config)# exit
-Router# show routing-config
+Router# show running-config
     enable password 7 08364441000A111F171C050A242E3627353E27010E0551510701
 ```
 
