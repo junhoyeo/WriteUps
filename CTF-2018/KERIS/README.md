@@ -183,7 +183,7 @@ gdb-peda$
 ## 암호학 1
 파이썬 오픈소스인 xor_solver를 이용해서 풀었다. [익스 참고](./exploit.py)
 
-> `today is cloudy. so my feeling is not good either.`
+> `flag{today is cloudy. so my feeling is not good either.}`
 
 ## 암호학 2 (예상풀이)
 ~~뚜까~~
