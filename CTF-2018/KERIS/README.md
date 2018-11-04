@@ -112,7 +112,7 @@ Router(config)# enable password whoisthewinnerofkeris2018
 ### 3단계: 암호화된 password 확인
 ```
 Router(config)# exit
-Router# show routing-config
+Router# show running-config
     enable password 7 08364441000A111F171C050A242E3627353E27010E0551510701
 ```
 
@@ -183,7 +183,32 @@ gdb-peda$
 
 > `today is cloudy. so my feeling is not good either.`
 
-## 암호학 2
-뚜까
+## 암호학 2 (예상풀이)
+~~뚜까~~
+
+1. 스케테일임
+2. 키도 없음
+3. 입력 제한시간이 매우 짧음
+
+> => 입력 후딱 받아서 키는 브포하고 가장 평문일 가능성이 높은 값을 찾아서 보내주기 => 엥 이런 solver를 시간 내에 짜는 게 가능해? => 어차피 나오는 평문은 한정되어 있지 않을까(정성이 대단하던데)
+
+예상풀이:
+
+1. pwntools 몇번 돌려서 암호화된 텍스트 몇개를 저장
+2. https://www.dcode.fr/scytale-cipher
+여기서 노가다해서 원래 평문을 찾아 매핑
+3. 다시 pwntools에서 암호문을 recv, 이에 해당하는 평문을 출력(만약 저장된 값이 아니면 close해서 던지고 다시 봄)
+
+문제:
+평문은 한정되어 있어도 key를 엄청 달리해서 만들었을 수도 있음(실제로 그런듯)
+
+예상풀이:
+암호문:평문으로 매핑할 때 함께 (예상)평문과 key가 다른 암호문도 매핑 => 매크로를 만든다
+
+문제:
+시간이 오래 걸린다 
+
+결론:
+그냥 몇개만 저장해두고 key랑 암호문이 때려맞길 기대한다 => ??? => profit!!!
 
 ## 암호학 3
