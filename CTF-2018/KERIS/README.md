@@ -183,6 +183,11 @@ gdb-peda$
 ## 암호학 1
 파이썬 오픈소스인 xor_solver를 이용해서 풀었다. [익스 참고](./exploit.py)
 
+`x = xor_solver(string.printable)`로 모든 printable한 string인 key에 대해서 찾고, key는 한자리라고 했으니까 `x.solve("$.#%96-&#;b+1b!.-7&;lb1-b/;b$''.+,%b+1b,-6b%--&b'+6*'0l?", 1)` 이렇게 두면 된다.
+
+그런데 결과가 너무 많아서 진짜 플래그가 있는지 확인하고 찾는 게 쉽지 않다. `a in b`로 찾을 수 있는데 `flag` 문자열이 대문자로 들어갈지 소문자로 들어갈지 확실하지 않다.
+그럴 땐 `'flag' in flag.lower()` 이렇게 해서 소문자로 다 내리고 찾으면 된다.
+
 > `flag{today is cloudy. so my feeling is not good either.}`
 
 ## 암호학 2 (예상풀이)
