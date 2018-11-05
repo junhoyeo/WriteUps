@@ -27,7 +27,7 @@ loc = [
     (8, 60),
     (17, 47)
 ]
-for i in loc:
-    flag[i[0]] = chrs[i[1]]
+for i, j in loc:
+    flag[i] = chrs[j]
 print(''.join(flag))
 # Go_4head_make_YouR_DaY^^X
