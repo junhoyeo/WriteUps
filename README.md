@@ -20,8 +20,8 @@ Nexon Youth Programming Challenge
 - [x] 2018년 NYPC 예선특별상
 
 ## Study
-KDMHS 18th 해낑스떠디(시스템 중심)
+KDMHS 18th 해낑스떠디
 
-<img src="./Study/logo.png" width="300">
-
-> 로드맵: FTZ -> LOB -> [pwnable.kr](pwnable.kr)
+- [ ] 해커스쿨 FTZ(challenge mode)
+- [ ] 해커스쿨 BOF
+- [ ] [pwnable.kr](http://pwnable.kr/)
