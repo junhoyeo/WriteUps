@@ -7,7 +7,6 @@
 펌웨어 분석 툴인 binwalk를 이용해서 풀이가 가능하다. 
 
 ```bash
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
 $ brew install binwalk
 ```
 
@@ -19,6 +18,7 @@ Youmaynotseeme.png라는 이름의 png 파일이 주어진다.
 
 ```bash
 $ binwalk Youmaynotseeme.png
+
 DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
 0             0x0             PNG image, 895 x 157, 8-bit/color RGB, non-interlaced
@@ -118,3 +118,109 @@ dominant color가 배경색인 `(8, 8, 8)`으로 나오는데 배경을 다른 �
 ```
 
 10진수로 바꾼 뒤 아스키코드로 출력하면 플래그가 나온다.
+
+### 4. Spookier Kitty (Hacktober CTF)
+
+![eco79u7v4kdvjpgbkz34w8xwfdi0k2ia.jpg](./prob-4/eco79u7v4kdvjpgbkz34w8xwfdi0k2ia.jpg)
+
+위와 같은 jpg 파일이 주어진다.
+
+```bash
+$ strings -a -n 7 eco79u7v4kdvjpgbkz34w8xwfdi0k2ia.jpg
+8xwfdi0k2ia.jpg
+flag-TerrifyingKitty
+EqOS*Vf
+DU>&XcQ
+eXF|,U&
+1.cPh(4
+R=nb7s0aj
+><Z"o+s'w
+```
+
+`strings`로 길이 7 이상의 문자열을 뽑아보면 플래그가 나온다.
+
+# 5. [What you see is what you get. (Pragyan CTF 2015)](https://github.com/ctfs/write-ups-2015/tree/master/pragyan-ctf-2015/stegano/what_you_see_is_what_you_get)
+
+![stego_50.jpg](./prob-5/stego_50.jpg)
+
+```bash
+binwalk stego_50.jpg
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             JPEG image data, JFIF standard 1.02
+10541         0x292D          Zip archive data, at least v1.0 to extract, compressed size: 37, uncompressed size: 37, name: usethis
+10720         0x29E0          End of Zip archive, footer length: 22
+```
+
+binwalk를 이용해서 파일 시그니처를 검색했다.
+
+```bash
+$ binwalk -D=".*" stego_50.jpg
+
+WARNING: The Python LZMA module could not be found. It is *strongly* recommended that you install this module for binwalk to provide proper LZMA identification and extraction results.
+
+WARNING: The Python LZMA module could not be found. It is *strongly* recommended that you install this module for binwalk to provide proper LZMA identification and extraction results.
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             JPEG image data, JFIF standard 1.02
+10541         0x292D          Zip archive data, at least v1.0 to extract, compressed size: 37, uncompressed size: 37, name: usethis
+10720         0x29E0          End of Zip archive, footer length: 22
+```
+
+각각의 파일에 대해서 extract를 시도했다.
+
+```bash
+$ cd _stego_50.jpg.extracted
+$ ls
+0    292D 29E0
+$ file 0
+0: JPEG image data, JFIF standard 1.02, aspect ratio, density 1x1, segment length 16, baseline, precision 8, 430x425, frames 3
+$ file 29E0
+29E0: Zip archive data (empty)
+$ file 292D
+292D: Zip archive data, at least v1.0 to extract
+$ unzip 29E0
+Archive:  29E0
+error [29E0]:  missing 179 bytes in zipfile
+  (attempting to process anyway)
+error [29E0]:  attempt to seek before beginning of zipfile
+  (please check that you have transferred or created the zipfile in the
+  appropriate BINARY mode and that you have compiled UnZip properly)
+$ unzip 292D
+Archive:  292D
+ extracting: usethis
+$ cat usethis
+steghide.sourceforge.net/download.php%
+```
+
+세 가지 파일이 생겼다.
+
+- `0`: JPEG 이미지
+- `29E0`: ZIP 파일이지만 압축 해제를 시도하면 에러가 발생한다.
+- `292D`: `steghide.sourceforge.net/download.php`라는 메세지가 있는 `usethis` 파일이 압축된 ZIP 파일이다.
+
+steghide라는 툴을 이용해서 이미지에 플래그를 숨겨둔 것 같다. 
+
+```bash
+$ cat 29E0
+PKMfDelta_Force\m/
+```
+
+`29E0` 파일의 내용을 출력해 보니 `Delta_Force\m/`라는 문자열이 발견됐다.
+
+```bash
+sudo apt-get install steghide
+steghide extract --stegofile stego_50.jpg
+Enter passphrase:
+wrote extracted data to "key_stego_1".
+cat key_stego_1
+Congrats! This was way too wasy :P
+
+This is the key:
+
+PrAgyaNCTF_sTeg1_key
+```
+
+passphrase를 `Delta_Force\m/`로 해서 플래그를 구할 수 있었다.
