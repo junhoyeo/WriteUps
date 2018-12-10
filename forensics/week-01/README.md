@@ -261,9 +261,7 @@ h1d1ng_in_4lm0st_pla1n_sigh7
 
 ![](./prob-6/2.png)
 
-http://f00l.de/hacking/pcapfix.php
-
-툴([pcapfix](https://github.com/Rup0rt/pcapfix)의 온라인 버전)을 이용해서 `packet capture length`를 고쳤다.
+[http://f00l.de/hacking/pcapfix.php](http://f00l.de/hacking/pcapfix.php)(툴 [pcapfix](https://github.com/Rup0rt/pcapfix)의 온라인 버전)을 이용해서 `packet capture length`를 고쳤다.
 
 ![](./prob-6/3.png)
 
@@ -308,7 +306,7 @@ def encode(pt, cnt=50):
 # 이후 encode(FLAG, cnt=?) 호출
 ```
 
-즉, 암호문의 첫 바이트(숫자)가 문자열의 다른 부분에 대한 암호화 방식을 알려준다.
+즉, 암호문의 첫 바이트(숫자)가 문자열의 다른 부분에 대한 암호화 방식을 알려주는 구조가 재귀적으로 반복되게 된다.
 
 ```python
 def decode(pt, cnt):
