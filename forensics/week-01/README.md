@@ -286,7 +286,7 @@ binwalk를 이용해서 `MarioCastle.jpg` 파일을 추출했다.
 ![](./prob-9/_bowser.jpg.extracted/MarioCastle.jpg)
 
 ```bash
-binwalk MarioCastle.jpg 
+$ binwalk MarioCastle.jpg 
 
 DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
