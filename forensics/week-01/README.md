@@ -1,6 +1,9 @@
 # Multimedia Forensics
 
-## Steganography
+- Image Steganography
+- Network Packets
+
+## Image Steganography
 데이터를 다른 데이터 사이에 삽입해 은폐하는 기술이다.
 
 ### #1. [Inception (DefCamp CTF Qualification 2017)](https://ctftime.org/task/4700)
@@ -139,7 +142,7 @@ R=nb7s0aj
 
 `strings`로 길이 7 이상의 문자열을 뽑아보면 플래그가 나온다.
 
-# 5. [What you see is what you get. (Pragyan CTF 2015)](https://github.com/ctfs/write-ups-2015/tree/master/pragyan-ctf-2015/stegano/what_you_see_is_what_you_get)
+### 5. [What you see is what you get. (Pragyan CTF 2015)](https://github.com/ctfs/write-ups-2015/tree/master/pragyan-ctf-2015/stegano/what_you_see_is_what_you_get)
 
 ![stego_50.jpg](./prob-5/stego_50.jpg)
 
@@ -211,11 +214,11 @@ PKMfDelta_Force\m/
 `29E0` 파일의 내용을 출력해 보니 `Delta_Force\m/`라는 문자열이 발견됐다.
 
 ```bash
-sudo apt-get install steghide
-steghide extract --stegofile stego_50.jpg
+$ sudo apt-get install steghide
+$ steghide extract --stegofile stego_50.jpg
 Enter passphrase:
 wrote extracted data to "key_stego_1".
-cat key_stego_1
+$ cat key_stego_1
 Congrats! This was way too wasy :P
 
 This is the key:
@@ -224,3 +227,102 @@ PrAgyaNCTF_sTeg1_key
 ```
 
 passphrase를 `Delta_Force\m/`로 해서 플래그를 구할 수 있었다.
+
+### 7. keep-calm-and-ctf-100 (CSAW-2015)
+
+> My friend sends me pictures before every ctf. He told me this one was special.
+>
+> Note: this flag doesn't follow the "flag{}" format
+
+![](./prob-7/img.jpg)
+
+![](./prob-7/1.png)
+
+EXIF의 Copyright에 플래그가 있다.
+
+```
+$ strings -a -n 7 img.jpg
+h1d1ng_in_4lm0st_pla1n_sigh7
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+(...)
+```
+
+물론 strings로도 나온다.
+
+## Network Packets
+네트워크 패킷
+
+### 6. weirdShark-150 (CodeGate-2014)
+
+![](./prob-6/1.png)
+
+주어진 패킷 파일을 와이어샤크로 로드하려고 시도하면 에러가 발생한다.
+
+![](./prob-6/2.png)
+
+http://f00l.de/hacking/pcapfix.php
+
+툴([pcapfix](https://github.com/Rup0rt/pcapfix)의 온라인 버전)을 이용해서 `packet capture length`를 고쳤다.
+
+![](./prob-6/3.png)
+
+HTTP로 각종 파일을 다운로드한 흔적이 있다.
+
+![](./prob-6/4.png)
+
+![](./prob-6/5.png)
+
+파일들을 export하고 하나씩 살펴보면 `multiple.pdf`에 플래그 `FORENSICS_WITH_HAXORS`가 있다.
+
+### 8. transfer-100 (CSAW-2015)
+
+```bash
+$ strings net_756d631588cb0a400cc16d1848a5f0fb.pcap | grep 'flag'
+FLAG = 'flag{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}'
+```
+
+뭔가 있다.
+
+![](./prob-8/1.png)
+
+`tcp contains flag`로 필터링했다.
+
+![](./prob-8/2.png)
+
+`Follow TCP Stream`으로 flag를 암호화해서 출력하는 파이썬 스크립트(그리고 암호화된 flag)를 발견할 수 있었다.
+
+`encode` 함수를 살펴봤다.
+
+```python
+enc_ciphers = ['rot13', 'b64e', 'caesar']
+# enc_ciphers는 암호화 함수 이름 목록
+def encode(pt, cnt=50):
+    tmp = '2{}'.format(b64encode(pt)) # 맨 처음에는 먼저 한번 base64로 하고 시작
+    for cnt in xrange(cnt): # cnt번 반복
+        c = random.choice(enc_ciphers) # enc_ciphers에서 함수 하나를 무작위로 골라
+        i = enc_ciphers.index(c) + 1 # i는 리스트에서 고른 함수의 인덱스 + 1로 두고
+        _tmp = globals()[c](tmp) # 고른 함수를 실행시킨 뒤
+        tmp = '{}{}'.format(i, _tmp) # i를 앞에 두고 저장
+    return tmp
+# 이후 encode(FLAG, cnt=?) 호출
+```
+
+즉, 암호문의 첫 바이트(숫자)가 문자열의 다른 부분에 대한 암호화 방식을 알려준다.
+
+```python
+def decode(pt, cnt):
+    for i in xrange(cnt):
+        c = pt[0]
+        if c in ['1', '2', '3']:
+          pt = globals()[dec_ciphers[int(c)-1]](pt[1:])
+    return pt
+print decode(enc, 100) # enc에 쓰인 cnt 값보다 크게 두면 상관없음
+```
+
+`dec_ciphers`에 저장된 각각의 함수를 구현한 뒤, decrypt하는 스크립트를 짜서 돌렸다.
+
+```bash
+$ python exploit.py
+flag{li0ns_and_tig3rs_4nd_b34rs_0h_mi}
+```
