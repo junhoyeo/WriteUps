@@ -228,7 +228,7 @@ PrAgyaNCTF_sTeg1_key
 
 passphrase를 `Delta_Force\m/`로 해서 플래그를 구할 수 있었다.
 
-### 7. keep-calm-and-ctf-100 (CSAW-2015)
+### 7. keep-calm-and-ctf-100 (CSAW 2015)
 
 > My friend sends me pictures before every ctf. He told me this one was special.
 >
@@ -250,10 +250,73 @@ h1d1ng_in_4lm0st_pla1n_sigh7
 
 물론 strings로도 나온다.
 
+### 9. Pixel Princess (ECTF 2014)
+
+> Find the princess. Get the flag
+
+![](./prob-9/bowser.jpg)
+
+```bash
+$ binwalk -D=".*" bowser.jpg 
+
+WARNING: The Python LZMA module could not be found. It is *strongly* recommended that you install this module for binwalk to provide proper LZMA identification and extraction results.
+
+WARNING: The Python LZMA module could not be found. It is *strongly* recommended that you install this module for binwalk to provide proper LZMA identification and extraction results.
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             JPEG image data, JFIF standard 1.02
+140981        0x226B5         Zip archive data, at least v2.0 to extract, compressed size: 41199, uncompressed size: 42877, name: MarioCastle.jpg
+182338        0x2C842         End of Zip archive, footer length: 22
+$ ls
+0     226B5 2C842
+$ file 226B5 
+226B5: Zip archive data, at least v2.0 to extract
+$ file 2C842 
+2C842: Zip archive data (empty)
+$ cat 2C842 
+PKU8?%
+$ unzip 226B5 
+Archive:  226B5
+  inflating: MarioCastle.jpg     
+```
+
+binwalk를 이용해서 `MarioCastle.jpg` 파일을 추출했다.
+
+![](./prob-9/_bowser.jpg.extracted/MarioCastle.jpg)
+
+```bash
+binwalk MarioCastle.jpg 
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             JPEG image data, JFIF standard 1.01
+```
+
+passphrase가 `BaD_DR4G0N`이라는데 다른 파일 시그니처가 없었다.
+
+```bash
+$ steghide extract -sf MarioCastle.jpg
+Enter passphrase:
+steghide: could not extract any data with that passphrase!
+```
+
+steghide로 살펴봐도 마찬가지였다.
+
+```bash
+$ steghide extract -sf bowser.jpg
+Enter passphrase:
+wrote extracted data to "l.tar.gz".
+```
+
+`bowser.jpg`에 숨겨져 있었다. passphrase를 입력하고 추출된 파일의 압축을 푸니 플래그가 나왔다.
+
+![](./prob-9/flaga.jpg)
+
 ## Network Packets
 네트워크 패킷
 
-### 6. weirdShark-150 (CodeGate-2014)
+### 6. weirdShark-150 (CodeGate 2014)
 
 ![](./prob-6/1.png)
 
@@ -273,7 +336,7 @@ HTTP로 각종 파일을 다운로드한 흔적이 있다.
 
 파일들을 export하고 하나씩 살펴보면 `multiple.pdf`에 플래그 `FORENSICS_WITH_HAXORS`가 있다.
 
-### 8. transfer-100 (CSAW-2015)
+### 8. transfer-100 (CSAW 2015)
 
 ```bash
 $ strings net_756d631588cb0a400cc16d1848a5f0fb.pcap | grep 'flag'
@@ -288,7 +351,7 @@ FLAG = 'flag{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}'
 
 ![](./prob-8/2.png)
 
-`Follow TCP Stream`으로 flag를 암호화해서 출력하는 파이썬 스크립트(그리고 암호화된 flag)를 발견할 수 있었다.
+`Follow TCP Stream`으로 flag를 암호화해서 출력하는 파이썬 [스크립트](./prob-8/script.py)(그리고 [암호화된 flag](./prob-8/encrypted.py))를 발견할 수 있었다.
 
 `encode` 함수를 살펴봤다.
 
@@ -318,7 +381,7 @@ def decode(pt, cnt):
 print decode(enc, 100) # enc에 쓰인 cnt 값보다 크게 두면 상관없음
 ```
 
-`dec_ciphers`에 저장된 각각의 함수를 구현한 뒤, decrypt하는 스크립트를 짜서 돌렸다.
+`dec_ciphers`에 저장된 각각의 함수를 구현한 뒤, decrypt하는 [스크립트](./prob-8/exploit.py)를 짜서 돌렸다.
 
 ```bash
 $ python exploit.py
