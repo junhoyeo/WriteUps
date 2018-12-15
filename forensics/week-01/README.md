@@ -1,7 +1,7 @@
 # Multimedia Forensics
 
-- Image Steganography
-- Network Packets
+- [Image Steganography](#Image-Steganography)
+- [Network Packets](#Network-Packets)
 
 ## Image Steganography
 데이터를 다른 데이터 사이에 삽입해 은폐하는 기술이다.
