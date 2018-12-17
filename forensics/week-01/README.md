@@ -313,6 +313,12 @@ wrote extracted data to "l.tar.gz".
 
 ![](./prob-9/flaga.jpg)
 
+### 10. Wild Night Out (SwampCTF 2018)
+
+![](./prob-10/flag.png)
+
+![](./prob-10/1.jpg)
+
 ## Network Packets
 네트워크 패킷
 
