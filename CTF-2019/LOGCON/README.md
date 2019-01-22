@@ -144,7 +144,7 @@ RIP에서는 Hop Count가 16을 넘어가면 안된다.
 ## 워싱턴DC
 > 서버가 요청을 접수했지만 아직 처리하지 않았을 경우 전송되는 HTTP 상태 코드
 
-`TeamLog{102}`
+`TeamLog{202}`
 
 ## 야!한 빨간 사이트..!
 HTTP로 날아온 오브젝트 꺼내서 보면 Twice_background.png에 써있다.
