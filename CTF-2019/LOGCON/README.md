@@ -98,7 +98,7 @@ print(''.join([chr(i) for i in flag]))
 
 https://i.pinimg.com/originals/7c/11/Nerf_this!/e5/7c11e5c837e74c914f27d9aa77fc1d8e.png
 
-이런 pinimg 링크가 있는데 라우팅 형식에 안 맞으므로 `Nerf_this!`를 빼주면 된다.
+이런 pinimg 링크가 있는데 i.pinimg.com의 라우팅 형식에 안 맞으므로 `Nerf_this!`를 빼주면 된다.
 
 https://i.pinimg.com/originals/7c/11/e5/7c11e5c837e74c914f27d9aa77fc1d8e.png
 
