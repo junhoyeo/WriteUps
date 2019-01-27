@@ -98,7 +98,7 @@ print(''.join([chr(i) for i in flag]))
 
 https://i.pinimg.com/originals/7c/11/Nerf_this!/e5/7c11e5c837e74c914f27d9aa77fc1d8e.png
 
-이런 pinimg 링크가 있는데 라우팅 형식에 안 맞으므로 `Nerf_this!`를 빼주면 된다.
+이런 pinimg 링크가 있는데 i.pinimg.com의 라우팅 형식에 안 맞으므로 `Nerf_this!`를 빼주면 된다.
 
 https://i.pinimg.com/originals/7c/11/e5/7c11e5c837e74c914f27d9aa77fc1d8e.png
 
@@ -144,7 +144,7 @@ RIP에서는 Hop Count가 16을 넘어가면 안된다.
 ## 워싱턴DC
 > 서버가 요청을 접수했지만 아직 처리하지 않았을 경우 전송되는 HTTP 상태 코드
 
-`TeamLog{102}`
+`TeamLog{202}`
 
 ## 야!한 빨간 사이트..!
 HTTP로 날아온 오브젝트 꺼내서 보면 Twice_background.png에 써있다.
