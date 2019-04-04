@@ -65,7 +65,7 @@ f.write(a)
 
 사이트에 접속하면 base64로 인코딩된 엄청난 길이의 문자열이 있는데 이걸 디코딩해서 png 파일로 출력하면 된다.
 
-<img src="./images/chicken.png" width="70%">
+<img src="./images/chicken.png?v=2" width="70%">
 
 ## Hard MIC CHECK!
 base85이다. 
