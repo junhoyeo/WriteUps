@@ -19,7 +19,7 @@
 `TRUST{이동준/조정훈}`
 
 ## 포인트가 필요하시나요?
-![](./images/kkutu.png)
+<img src="./images/kkutu.png" width="70%">
 
 ## STACK
 ```
@@ -30,7 +30,7 @@ FLAG{You_know_STACK???}
 ```
 
 ## Black Out
-![](images/blackout.png)
+<img src="images/blackout.png" width="70%">
 
 그림판 같은 툴로 배경을 다른 색으로 채워주면 된다.
 
@@ -52,7 +52,7 @@ while 1:
 ```
 
 ## 포스터
-![](images/poster.png)
+<img src="images/poster.png" width="70%">
 
 ## CHICKEN!!
 ```py
@@ -65,7 +65,7 @@ f.write(a)
 
 사이트에 접속하면 base64로 인코딩된 엄청난 길이의 문자열이 있는데 이걸 디코딩해서 png 파일로 출력하면 된다.
 
-![](./images/chicken.png)
+<img src="./images/chicken.png?v=2" width="70%">
 
 ## Hard MIC CHECK!
 base85이다. 
@@ -93,19 +93,19 @@ Ook 컴파일러를 이용한다.
 `FLAG{BRAIN_STEALTH}`
 
 ## Hello, PNG!
-![](images/hello.png)
+<img src="images/hello.png" width="70%">
 
 QR코드를 위처럼 복구하고 스캔하면 `RkxBR3tRcl9jMGQyX3MxbVBpZV9ncjFuX1hkfQ==`라는 base64 인코딩된 텍스트가 나온다.
 
 `FLAG{Qr_c0d2_s1mPie_gr1n_Xd}`
 
 ## 자물쇠
-![](images/lock.png)
+<img src="images/lock.png" width="70%">
 
 ## 끄투코리아
 와이어샤크가 없어서 그냥...
 
-![](images/korea.png)
+<img src="images/korea.png" width="70%">
 
 ## Mic Check!
 `FLAG{Welcome_to_TRUSTEALTHCTF!!!!}`
@@ -252,54 +252,54 @@ http://test.c2w2m2.com/chick/ 에 가면 https://github.com/arthaud/git-dumper �
 
 해당 origin 주소로 가보면
 
-![](images/chicken1.png)
+<img src="images/chicken1.png" width="70%">
 
 플래그 앞부분이 있다. 해당 레포를 분석해 봐도 다른 부분은 전혀 없었다. 
 
-![](images/chicken2.png)
+<img src="images/chicken2.png" width="70%">
 
 `c2w2` 사용자(누군가의 부계정인 듯 하다)의 프로필을 살펴보니 `@mynameischick1`과 이상한 숫자 `493283847281394`가 있었다. chickrun의 README.md에 `트위터 재밌땅`이 있었으니 아마 트위터가 아닐까 하고 찾아보니...
 
-![](images/chicken3.png)
+<img src="images/chicken3.png" width="70%">
 
 이런 계정이 있었다.
 
-![](images/chicken4.png)
+<img src="images/chicken4.png" width="70%">
 
 시간 순으로 밑에서부터 살펴봤다. 메모를 어디에 업로드한 게시글의 아이디인 것 같다.
 
-![](images/chicken8.png)
+<img src="images/chicken8.png" width="70%">
 
 처음에는 pastebin인 줄 알았는데 아니였고, DIMICTF 때처럼 imgur가 아닐까 해서 imgur를 살펴봤다.
 
-![](images/chicken5.png)
+<img src="images/chicken5.png" width="70%">
 
 다시 트위터 페이지로 돌아가 올려 보면 이런 QR 코드 gif 이미지를 올려 두었는데 심볼이 없어졌다 나타났다 한다. mp4로 다운로드 받고 잘 멈춰서 스캔하면 `Flag3 : y_m1sc_p`가 나온다.
 
-![](images/chicken7.png)
+<img src="images/chicken7.png" width="70%">
 
 트위터 페이지에 등록된 URL을 가면 이렇게 뜨는데 이때 authkey가 무엇인지 도저히 모르겠어서 힘들었다.
 그때 깃허브 페이지에 있었던 숫자가 생각났다.
 
-![](images/chicken9.png)
+<img src="images/chicken9.png" width="70%">
 
-![](images/chicken10.png)
+<img src="images/chicken10.png" width="70%">
 
 넣으니까 플래그의 마지막 부분이 나왔다. 
 
-![](images/chick1.png)
+<img src="images/chick1.png" width="70%">
 
 답을 인증하고 치킨을 달라고 했는데 교환권을 찾아오라고 하셨다.
 
-![](images/chick2.png)
+<img src="images/chick2.png" width="70%">
 
 구글 계정에 교환권이 있나 보다.
 
-![](images/chicken-ticket.png)
+<img src="images/chicken-ticket.png" width="70%">
 
 트위터에 등록된 구글 계정 이메일 `mynameischick321@gmail.com`과 아직까지 모은 플래그 `FLAG{th1s_15_e4sy_m1sc_pr0b_fun?:XD}`를 비밀번호로 로그인하고 구글 드라이브를 살펴보면 교환권을 찾을 수 있었다.
 
-![](images/chick3.png)
+<img src="images/chick3.png" width="70%">
 
 뿌링클이 그렇게 맛있다고 해서 얻었다. 1.25리터 콜라까지 챙겨주시는 세심함에 감동...
 
@@ -334,7 +334,7 @@ print (''.join([chr(int(i, 2)) for i in s]))
 `FLAG{trustealth}`
 
 ## 네모네모네모네모
-![](images/nemo.png)
+<img src="images/nemo.png" width="70%">
 
 # GOOGLING
 
