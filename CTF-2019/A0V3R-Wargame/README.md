@@ -11,16 +11,16 @@ curl -v --cookie "HTTP_ACCEPT_ENCODING=I;HTTP_USER_AGENT=need;HELLO=a;WORLD=flag
 하면
 
 ```js
-<script>alert('[Suzukaze aoba says]\nWow! I finally my graphics card mined the beatcoin!\nHere\'s a little prize!\nA0V3R{1_g0T-Th3_bE4tC01n!_!}');</script>
+<script>alert('[Suzukaze aoba says]\nWow! I finally my graphics card mined the beatcoin!\nHere\'s a little prize!\nA0V3R{*********************}');</script>
 ```
 
-`A0V3R{1_g0T-Th3_bE4tC01n!_!}`
+`A0V3R{*********************}`
 
 ## 아오바 워게임 디스코드 
-`A0V3R{W3lc0me_t0_A0v3r_w4rGaM3_D1sc0rd_53rver_!_!}`
+`A0V3R{*******************************************}`
 
 ## King bases on 8,8
-`A0V3R{Th3_K1nG_C0m35_B4s3_64}`
+`A0V3R{**********************}`
 
 ## No_Random_No_Life
 ```
@@ -30,5 +30,5 @@ $ nc server2.aover.team 12345
 8
 $ nc server2.aover.team 12345
 5 나와야됨
-A0V3R{BUT_I_LOVE_YOU}
+A0V3R{**************}
 ```
